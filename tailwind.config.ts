@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        pumba: {
+          red: "#FF1E1E",
+          black: "#000000",
+          gold: "#FFD700"
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +90,48 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'flame': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-grow': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'bounce-in': {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.98)' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'flame': 'flame 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-grow': 'pulse-grow 2s ease-in-out infinite',
+        'slide-up': 'slide-up 0.5s ease-out forwards',
+        'fade-in': 'fade-in 0.7s ease-out forwards',
+        'bounce-in': 'bounce-in 0.8s ease-out forwards',
+			},
+      fontFamily: {
+        'anton': ['Anton', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
