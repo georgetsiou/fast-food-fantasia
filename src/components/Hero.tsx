@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, ShoppingBag, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   useEffect(() => {
@@ -23,6 +24,10 @@ const Hero = () => {
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleOrderClick = () => {
+    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
+  };
   
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -68,8 +73,17 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8 reveal">
-            <a href="#menu" className="btn-primary">Δείτε το Μενού</a>
-            <a href="tel:2310799500" className="btn-secondary">Καλέστε Τώρα</a>
+            <Button 
+              className="btn-primary flex items-center gap-2"
+              onClick={handleOrderClick}
+            >
+              <ShoppingBag size={18} />
+              Παραγγελία Online
+            </Button>
+            <a href="tel:2310799500" className="btn-secondary flex items-center justify-center gap-2">
+              <Phone size={18} />
+              Καλέστε Τώρα
+            </a>
           </div>
         </div>
       </div>

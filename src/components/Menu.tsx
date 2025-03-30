@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 const menuItems = [
   {
@@ -78,7 +79,7 @@ const menuItems = [
     items: [
       { 
         name: "Πατάτες Pumba", 
-        description: "Τηγανιτές πατάτες με σάλτσα, τυρί & μπέικον", 
+        description: "Τηγανιτές πατάτες με σάλτσα, ��υρί & μπέικον", 
         price: "3.50€",
         image: "https://images.unsplash.com/photo-1623238913327-8e4ade5de5c8?q=80&w=1000&auto=format&fit=crop"
       },
@@ -156,7 +157,13 @@ const Menu = () => {
           
           <div className="text-center mt-16 reveal">
             <p className="text-lg mb-6">Θέλετε να δείτε το πλήρες μενού μας;</p>
-            <button className="btn-primary">Πλήρες Μενού</button>
+            <Button 
+              className="btn-primary flex items-center gap-2"
+              onClick={() => window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank')}
+            >
+              Πλήρες Μενού
+              <ExternalLink size={16} />
+            </Button>
           </div>
         </div>
       </div>

@@ -1,8 +1,13 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, ShoppingBag } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
+  const handleOrderClick = () => {
+    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
+  };
+
   return (
     <footer className="bg-black pt-12 pb-6 text-white">
       <div className="container mx-auto">
@@ -66,9 +71,13 @@ const Footer = () => {
               </ul>
               
               <div className="mt-6">
-                <a href="#" className="btn-primary inline-block">
+                <Button
+                  className="btn-primary flex items-center gap-2"
+                  onClick={handleOrderClick}
+                >
+                  <ShoppingBag size={18} />
                   Παραγγείλτε Τώρα
-                </a>
+                </Button>
               </div>
             </div>
           </div>

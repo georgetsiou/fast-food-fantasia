@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ShoppingBag } from 'lucide-react';
+import { Menu, X, Phone, ShoppingBag, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,10 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const handleOrderClick = () => {
+    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
+  };
   
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 shadow-md py-2' : 'bg-transparent py-4'}`}>
@@ -36,10 +41,13 @@ const Navbar = () => {
             <Phone size={18} className="mr-1" />
             <span>231 079 9500</span>
           </a>
-          <button className="btn-primary flex items-center">
+          <Button
+            className="btn-primary flex items-center"
+            onClick={handleOrderClick}
+          >
             <ShoppingBag size={18} className="mr-2" />
             Παραγγελία
-          </button>
+          </Button>
         </div>
         
         <button className="md:hidden text-white" onClick={toggleMenu}>
@@ -64,10 +72,13 @@ const Navbar = () => {
             <span>231 079 9500</span>
           </a>
           
-          <button className="btn-primary flex items-center mt-4">
+          <Button
+            className="btn-primary flex items-center mt-4"
+            onClick={handleOrderClick}
+          >
             <ShoppingBag size={18} className="mr-2" />
             Παραγγελία
-          </button>
+          </Button>
         </div>
       )}
     </nav>

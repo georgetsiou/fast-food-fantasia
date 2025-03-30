@@ -1,8 +1,13 @@
 
 import React from 'react';
-import { Phone, ArrowRight } from 'lucide-react';
+import { Phone, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
+  const handleOrderClick = () => {
+    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
+  };
+
   return (
     <div className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -29,13 +34,13 @@ const CallToAction = () => {
               231 079 9500
             </a>
             
-            <a 
-              href="#menu" 
+            <Button 
               className="btn-secondary flex items-center justify-center"
+              onClick={handleOrderClick}
             >
-              Δείτε το Μενού
-              <ArrowRight size={18} className="ml-2" />
-            </a>
+              <ShoppingBag size={18} className="mr-2" />
+              Παραγγείλτε Online
+            </Button>
           </div>
         </div>
       </div>
