@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ShoppingBag } from 'lucide-react';
 
 const menuItems = [
   {
@@ -9,21 +10,21 @@ const menuItems = [
     items: [
       { 
         name: "Γύρος Χοιρινός", 
-        description: "Ζουμερός χοιρινός γύρος, με φρέσκιες πατάτες, ντομάτα, κρεμμύδι & σάλτσα", 
-        price: "4.20€",
-        image: "https://images.unsplash.com/photo-1633321702518-7feccafb94d5?q=80&w=1000&auto=format&fit=crop"
+        description: "Πίτα, γύρος χοιρινός, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "4.70€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041559?v=202307312146"
       },
       { 
         name: "Γύρος Κοτόπουλο", 
-        description: "Τρυφερό φιλέτο κοτόπουλο, με φρέσκιες πατάτες, ντομάτα, κρεμμύδι & σάλτσα", 
-        price: "4.20€",
-        image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?q=80&w=1000&auto=format&fit=crop"
+        description: "Πίτα, γύρος κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "4.70€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041560?v=202307312146"
       },
       { 
-        name: "Special Γύρος", 
-        description: "Ο αγαπημένος σας γύρος με έξτρα τυρί, μπέικον και σως BBQ", 
-        price: "5.40€",
-        image: "https://images.unsplash.com/photo-1632825953570-57a47e3bd732?q=80&w=1000&auto=format&fit=crop"
+        name: "Γύρος Χοιρινός Special", 
+        description: "Πίτα, γύρος χοιρινός, ντομάτα, κρεμμύδι, πατάτες, τυρί, μπέικον, σως BBQ", 
+        price: "5.90€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041564?v=202307312146"
       },
     ]
   },
@@ -32,21 +33,21 @@ const menuItems = [
     items: [
       { 
         name: "Καλαμάκι Χοιρινό", 
-        description: "Ζουμερό χοιρινό καλαμάκι με φρέσκιες πατάτες, ντομάτα, κρεμμύδι & σάλτσα", 
+        description: "Πίτα, καλαμάκι χοιρινό, ντομάτα, κρεμμύδι, πατάτες, σως", 
         price: "3.80€",
-        image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop"
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041553?v=202307312146"
       },
       { 
         name: "Καλαμάκι Κοτόπουλο", 
-        description: "Τρυφερό φιλέτο κοτόπουλο καλαμάκι με φρέσκιες πατάτες, ντομάτα, κρεμμύδι & σάλτσα", 
+        description: "Πίτα, καλαμάκι κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως", 
         price: "3.80€",
-        image: "https://images.unsplash.com/photo-1602418237125-baec591f0a8b?q=80&w=1000&auto=format&fit=crop"
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041555?v=202307312146"
       },
       { 
-        name: "Καλαμάκι Κεμπάπ", 
-        description: "Παραδοσιακό κεμπάπ με φρέσκιες πατάτες, ντομάτα, κρεμμύδι & σάλτσα", 
+        name: "Κεμπάπ", 
+        description: "Πίτα, κεμπάπ, ντομάτα, κρεμμύδι, πατάτες, σως", 
         price: "3.80€",
-        image: "https://images.unsplash.com/photo-1530469912745-a215c6b256ea?q=80&w=1000&auto=format&fit=crop"
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041562?v=202307312146"
       },
     ]
   },
@@ -55,51 +56,55 @@ const menuItems = [
     items: [
       { 
         name: "Μερίδα Γύρος Χοιρινός", 
-        description: "Μερίδα ζουμερό χοιρινό γύρο με φρέσκιες πατάτες, σαλάτα & σάλτσα", 
-        price: "8.50€", 
+        description: "Γύρος χοιρινός, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€", 
         featured: true,
-        image: "https://images.unsplash.com/photo-1654921553810-897658b0fb29?q=80&w=1000&auto=format&fit=crop"
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041580?v=202307312146"
       },
       { 
         name: "Μερίδα Γύρος Κοτόπουλο", 
-        description: "Μερίδα τρυφερό φιλέτο κοτόπουλο με φρέσκιες πατάτες, σαλάτα & σάλτσα", 
-        price: "8.50€",
-        image: "https://images.unsplash.com/photo-1617476422576-76d7d263438c?q=80&w=1000&auto=format&fit=crop"
+        description: "Γύρος κοτόπουλο, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041581?v=202307312146"
       },
       { 
-        name: "Μερίδα Καλαμάκια", 
-        description: "Μερίδα με 3 καλαμάκια της επιλογής σας, φρέσκιες πατάτες, σαλάτα & σάλτσα", 
-        price: "9.50€",
-        image: "https://images.unsplash.com/photo-1620807773206-49c1f2d16d63?q=80&w=1000&auto=format&fit=crop"
+        name: "Μερίδα Καλαμάκια Χοιρινά", 
+        description: "3 καλαμάκια χοιρινά, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041576?v=202307312146"
       },
     ]
   },
   {
-    category: "Ορεκτικά & Συνοδευτικά",
+    category: "Σαλάτες & Ορεκτικά",
     items: [
       { 
-        name: "Πατάτες Pumba", 
-        description: "Τηγανιτές πατάτες με σάλτσα, ��υρί & μπέικον", 
+        name: "Πατάτες", 
+        description: "Φρέσκιες τηγανιτές πατάτες", 
         price: "3.50€",
-        image: "https://images.unsplash.com/photo-1623238913327-8e4ade5de5c8?q=80&w=1000&auto=format&fit=crop"
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041597?v=202307312146"
       },
       { 
         name: "Τζατζίκι", 
-        description: "Σπιτικό τζατζίκι με αγγούρι, σκόρδο & γιαούρτι", 
-        price: "2.50€",
-        image: "https://images.unsplash.com/photo-1615935844198-ab8fbc9f4d1f?q=80&w=1000&auto=format&fit=crop"
+        description: "Κλασικό τζατζίκι", 
+        price: "3.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041598?v=202307312146"
       },
       { 
         name: "Φέτα", 
-        description: "Παραδοσιακή ελληνική φέτα με ελαιόλαδο & ρίγανη", 
-        price: "3.00€",
-        image: "https://images.unsplash.com/photo-1624494489813-d7eba38186a8?q=80&w=1000&auto=format&fit=crop"
+        description: "Φέτα με ελαιόλαδο και ρίγανη", 
+        price: "3.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041599?v=202307312146"
       },
     ]
   }
 ];
 
 const Menu = () => {
+  const handleOrderClick = () => {
+    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
+  };
+
   return (
     <div id="menu" className="section bg-black text-white">
       <div className="container mx-auto">
@@ -119,10 +124,10 @@ const Menu = () => {
                   {category.items.map((item, itemIdx) => (
                     <div 
                       key={itemIdx} 
-                      className={`menu-item ${item.featured ? 'border-pumba-red' : ''}`}
+                      className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}
                     >
-                      <div className="flex flex-col md:flex-row gap-4">
-                        <div className="md:w-1/3 w-full overflow-hidden rounded-lg">
+                      <div className="flex flex-col md:flex-row">
+                        <div className="md:w-1/3 w-full overflow-hidden">
                           <AspectRatio ratio={1 / 1} className="bg-slate-800">
                             <img 
                               src={item.image} 
@@ -131,13 +136,13 @@ const Menu = () => {
                             />
                           </AspectRatio>
                         </div>
-                        <div className="md:w-2/3 w-full flex flex-col justify-between">
+                        <div className="md:w-2/3 w-full flex flex-col justify-between p-4">
                           <div>
-                            <div className="flex justify-between items-start">
+                            <div className="flex justify-between items-start mb-2">
                               <h4 className="text-xl font-bold">{item.name}</h4>
                               <span className="text-pumba-gold font-bold">{item.price}</span>
                             </div>
-                            <p className="text-gray-300 mt-2">{item.description}</p>
+                            <p className="text-gray-300">{item.description}</p>
                           </div>
                           {item.featured && (
                             <div className="mt-3">
@@ -159,9 +164,10 @@ const Menu = () => {
             <p className="text-lg mb-6">Θέλετε να δείτε το πλήρες μενού μας;</p>
             <Button 
               className="btn-primary flex items-center gap-2"
-              onClick={() => window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank')}
+              onClick={handleOrderClick}
             >
-              Πλήρες Μενού
+              <ShoppingBag size={18} />
+              Παραγγείλτε Online
               <ExternalLink size={16} />
             </Button>
           </div>

@@ -13,7 +13,7 @@ const CallToAction = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+          src="https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/banner?v=202307312146" 
           alt="Gyros background" 
           className="w-full h-full object-cover"
         />

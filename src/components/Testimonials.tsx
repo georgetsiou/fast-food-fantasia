@@ -12,45 +12,66 @@ import {
 const testimonials = [
   {
     id: 1,
-    name: "Kyprianos Stavrou",
-    text: "Γεμάτο πιτογυρο με κρέας πολυ καλό ψήσιμο. Οι πατάτες είναι κάπως μικρές, αλλα είναι πολύ μεγάλη η μερίδα, οπότε δεν μειώνεται σε τίποτα.",
+    name: "Stella Zoumpoulidi",
+    text: "Μακράν ότι καλύτερο...τεράστια μερίδα...πολύ γευστικό...και έφερα και σπίτι! Αξίζει τα λεφτά του!!!",
     rating: 5,
-    date: "1 month ago"
+    date: "33 ημέρες πριν"
   },
   {
     id: 2,
-    name: "Theo Andreou",
-    text: "Πολύ νόστιμο φαγητό. Το κρέας πολύ μαλακό, γευστικό και άφθονο. Πολύ καλές πατάτες και πολύ τίμια η ποσότητα και η πίτα. Το συνιστώ ανεπιφύλακτα. 10/10",
+    name: "Νίκος Παγκωνιάτης",
+    text: "Μεγάλες μερίδες, πολύ νόστιμες. Καθαρός χώρος. Εξαιρετική εξυπηρέτηση.",
     rating: 5,
-    date: "2 months ago"
+    date: "1 χρόνο πριν"
   },
   {
     id: 3,
-    name: "Anastasios Anagnostidis",
-    text: "Ότι καλύτερο έχω φάει στην περιοχή! Το κοτόπουλο ήταν τέλειο, η σος απίστευτη και μπόλικες πατάτες! Ανυπομονώ να ξανάρθω!",
+    name: "Κυπριανός Σταύρου",
+    text: "Γεμάτο πιτόγυρο με κρέας πολύ καλό ψήσιμο. Οι πατάτες είναι κάπως μικρές, αλλά είναι πολύ μεγάλη η μερίδα, οπότε δεν μειώνεται σε τίποτα.",
     rating: 5,
-    date: "3 months ago"
+    date: "1 μήνα πριν"
   },
   {
     id: 4,
-    name: "Yiannis Gkoutzolis",
-    text: "Τα καλύτερα πιτόγυρα! Με τις καλύτερες πατάτες! Πολύ μεγάλη μερίδα, δεν μπορεί να την φάει ένα άτομο!",
-    rating: 5,
-    date: "4 months ago"
-  },
-  {
-    id: 5,
-    name: "Nikos Pagkoniatis",
-    text: "Μεγάλες μερίδες, πολύ νόστιμες. Καθαρός χώρος. Εξαιρετική εξυπηρέτηση.",
-    rating: 5,
-    date: "a year ago"
-  },
-  {
-    id: 6,
     name: "Γιάννης Εξάρχου",
     text: "Το καλύτερο γύρο που έχω φάει σε ολόκληρη την Ελλάδα! Απίστευτες πατάτες, λαχταριστά όλα, στα 5 το κρέας είναι σε μεγάλη ποσότητα και λαχταριστό! Συστήνεται ανεπιφύλακτα!",
     rating: 5,
-    date: "8 months ago"
+    date: "8 μήνες πριν"
+  },
+  {
+    id: 5,
+    name: "Μίλτος Ρόζιας",
+    text: "Πολύ καλό κοτόπουλο, μεγάλες μερίδες, και σε πολύ καλή τιμή.",
+    rating: 5,
+    date: "3 μήνες πριν"
+  },
+  {
+    id: 6,
+    name: "Γιώργος Γκιουλές",
+    text: "Εξαιρετικό φαγητό, μεγάλες μερίδες, ευγενικό προσωπικό, πολύ ωραία ατμόσφαιρα!! Μια χαρά όλα!",
+    rating: 5,
+    date: "1 χρόνο πριν"
+  },
+  {
+    id: 7,
+    name: "Christos Galanis",
+    text: "ΤΕΛΕΙΟ...πολύ γευστικά όλα...υπέροχη γεύση...μεγάλες μερίδες. ΤΟ ΣΥΝΙΣΤΏ ΑΝΕΠΙΦΎΛΑΚΤΑ.",
+    rating: 5,
+    date: "10 μήνες πριν"
+  },
+  {
+    id: 8,
+    name: "Έλενα Ιωαννίδου",
+    text: "Πολύ νόστιμο φαγητό, μεγάλες μερίδες και πολύ γρήγορη εξυπηρέτηση.",
+    rating: 5,
+    date: "11 μήνες πριν"
+  },
+  {
+    id: 9,
+    name: "Αναστάσιος Αναγνωστίδης",
+    text: "Ότι καλύτερο έχω φάει στην περιοχή! Το κοτόπουλο ήταν τέλειο, η σος απίστευτη και μπόλικες πατάτες! Ανυπομονώ να ξανάρθω!",
+    rating: 5,
+    date: "3 μήνες πριν"
   }
 ];
 
@@ -67,7 +88,7 @@ const Testimonials = () => {
           </p>
           
           <div className="hidden md:grid md:grid-cols-3 gap-6">
-            {testimonials.slice(0, 3).map((testimonial) => (
+            {testimonials.slice(0, 6).map((testimonial) => (
               <div 
                 key={testimonial.id} 
                 className="bg-black/50 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-pumba-red transition-all duration-300 reveal"
@@ -141,12 +162,12 @@ const Testimonials = () => {
           
           <div className="mt-8 text-center reveal">
             <a 
-              href="https://www.google.com/search?q=pumba+gyros+sindos+reviews" 
+              href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-pumba-red hover:text-pumba-gold transition-colors"
             >
-              Δείτε περισσότερες κριτικές στο Google
+              Δείτε περισσότερες κριτικές στο e-food
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
