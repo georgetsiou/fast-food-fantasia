@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Phone, ArrowRight, ShoppingBag, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
@@ -35,11 +35,12 @@ const CallToAction = () => {
             </a>
             
             <Button 
-              className="btn-secondary flex items-center justify-center"
+              className="btn-secondary flex items-center justify-center gap-2"
               onClick={handleOrderClick}
             >
-              <ShoppingBag size={18} className="mr-2" />
+              <ShoppingBag size={18} />
               Παραγγείλτε Online
+              <ExternalLink size={16} />
             </Button>
           </div>
         </div>

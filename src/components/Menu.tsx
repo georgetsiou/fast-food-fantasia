@@ -26,6 +26,24 @@ const menuItems = [
         price: "5.90€",
         image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041564?v=202307312146"
       },
+      { 
+        name: "Γύρος Κοτόπουλο Special", 
+        description: "Πίτα, γύρος κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, τυρί, μπέικον, σως BBQ", 
+        price: "5.90€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041565?v=202307312146"
+      },
+      { 
+        name: "King Γύρος", 
+        description: "Μεγαλύτερη πίτα, διπλός γύρος χοιρινός, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "7.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041568?v=202307312146"
+      },
+      { 
+        name: "King Κοτόπουλο", 
+        description: "Μεγαλύτερη πίτα, διπλός γύρος κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "7.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041570?v=202307312146"
+      },
     ]
   },
   {
@@ -48,6 +66,24 @@ const menuItems = [
         description: "Πίτα, κεμπάπ, ντομάτα, κρεμμύδι, πατάτες, σως", 
         price: "3.80€",
         image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041562?v=202307312146"
+      },
+      { 
+        name: "Μπιφτέκι", 
+        description: "Πίτα, μπιφτέκι μοσχαρίσιο, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "3.80€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041554?v=202307312146"
+      },
+      { 
+        name: "Λουκάνικο", 
+        description: "Πίτα, λουκάνικο χωριάτικο, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "3.80€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041558?v=202307312146"
+      },
+      { 
+        name: "Μπιφτέκι Κοτόπουλο", 
+        description: "Πίτα, μπιφτέκι κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως", 
+        price: "3.80€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041557?v=202307312146"
       },
     ]
   },
@@ -73,6 +109,24 @@ const menuItems = [
         price: "10.00€",
         image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041576?v=202307312146"
       },
+      { 
+        name: "Μερίδα Καλαμάκια Κοτόπουλο", 
+        description: "3 καλαμάκια κοτόπουλο, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041577?v=202307312146"
+      },
+      { 
+        name: "Μερίδα Κεμπάπ", 
+        description: "4 τεμάχια κεμπάπ, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041582?v=202307312146"
+      },
+      { 
+        name: "Μερίδα Μπιφτέκια", 
+        description: "2 μπιφτέκια μοσχαρίσια, πατάτες, 2 πίτες, ντομάτα, κρεμμύδι, σως", 
+        price: "10.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041578?v=202307312146"
+      },
     ]
   },
   {
@@ -95,6 +149,65 @@ const menuItems = [
         description: "Φέτα με ελαιόλαδο και ρίγανη", 
         price: "3.50€",
         image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041599?v=202307312146"
+      },
+      { 
+        name: "Χωριάτικη", 
+        description: "Ντομάτα, αγγούρι, πιπεριά, κρεμμύδι, ελιές, φέτα", 
+        price: "6.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041600?v=202307312146"
+      },
+      { 
+        name: "Πιπεριές καυτερές", 
+        description: "Πράσινες πιπεριές καυτερές", 
+        price: "2.00€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041594?v=202307312146"
+      },
+    ]
+  },
+  {
+    category: "Μπέργκερ",
+    items: [
+      { 
+        name: "Classic Burger", 
+        description: "Μπιφτέκι μοσχαρίσιο, ντομάτα, μαρούλι, κρεμμύδι, μαγιονέζα, κέτσαπ", 
+        price: "5.00€",
+        featured: true,
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041601?v=202307312146"
+      },
+      { 
+        name: "Cheese Burger", 
+        description: "Μπιφτέκι μοσχαρίσιο, τυρί, ντομάτα, μαρούλι, κρεμμύδι, μαγιονέζα, κέτσαπ", 
+        price: "5.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041603?v=202307312146"
+      },
+      { 
+        name: "Double Burger", 
+        description: "Διπλό μπιφτέκι μοσχαρίσιο, διπλό τυρί, ντομάτα, μαρούλι, κρεμμύδι, μαγιονέζα, κέτσαπ", 
+        price: "7.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041604?v=202307312146"
+      },
+    ]
+  },
+  {
+    category: "Αναψυκτικά",
+    items: [
+      { 
+        name: "Coca Cola 330ml", 
+        description: "Κλασική Coca Cola", 
+        price: "1.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041618?v=202307312146"
+      },
+      { 
+        name: "Sprite 330ml", 
+        description: "Κλασικό Sprite", 
+        price: "1.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041621?v=202307312146"
+      },
+      { 
+        name: "Νερό 500ml", 
+        description: "Εμφιαλωμένο νερό", 
+        price: "0.50€",
+        image: "https://cdn.e-food.gr/cdn-cgi/image/f=auto/shop/527484246/items/000000000000041624?v=202307312146"
       },
     ]
   }
