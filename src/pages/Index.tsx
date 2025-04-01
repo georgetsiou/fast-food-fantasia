@@ -6,7 +6,6 @@ import Menu from '@/components/Menu';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import Location from '@/components/Location';
-import ContactForm from '@/components/ContactForm';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -43,7 +42,6 @@ const Index = () => {
       <CallToAction />
       <Testimonials />
       <Location />
-      <ContactForm />
       <Footer />
       <ScrollToTop />
     </div>
