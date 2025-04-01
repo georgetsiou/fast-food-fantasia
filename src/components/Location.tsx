@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { MapPin, Clock, Phone, Mail, Instagram } from 'lucide-react';
-
 const Location = () => {
-  return (
-    <div id="location" className="section bg-black">
+  return <div id="location" className="section bg-black">
       <div className="container mx-auto">
         <div className="max-w-5xl mx-auto">
           <h2 className="section-title text-center reveal">
@@ -17,16 +14,9 @@ const Location = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="reveal">
               <div className="rounded-lg overflow-hidden shadow-xl h-[400px]">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.7622419054073!2d22.803346876019193!3d40.67032987137419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a82500788b86bf%3A0x9f8fda01c49c284b!2sPUMBA!5e0!3m2!1sen!2sgr!4v1716826847159!5m2!1sen!2sgr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy"
-                  title="Pumba Gyros Location"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.7622419054073!2d22.803346876019193!3d40.67032987137419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a82500788b86bf%3A0x9f8fda01c49c284b!2sPUMBA!5e0!3m2!1sen!2sgr!4v1716826847159!5m2!1sen!2sgr" width="100%" height="100%" style={{
+                border: 0
+              }} allowFullScreen loading="lazy" title="Pumba Gyros Location" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             
@@ -38,7 +28,7 @@ const Location = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Διεύθυνση</h3>
-                    <p className="text-gray-300">Παρ. Παναγούλη 6, Περαία, Θεσσαλονίκη 57019</p>
+                    <p className="text-gray-300">Μεγ. Αλεξάνδρου 55, Σίνδος, Θεσσαλονίκη 57400</p>
                   </div>
                 </div>
                 
@@ -108,8 +98,6 @@ const Location = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Location;
