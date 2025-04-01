@@ -35,6 +35,10 @@ const Index = () => {
 
   return (
     <div className="bg-black text-white">
+      {/* Background character elements */}
+      <div className="bg-character-pumba"></div>
+      <div className="bg-character-timon"></div>
+      
       <Navbar />
       <Hero />
       <Menu />
