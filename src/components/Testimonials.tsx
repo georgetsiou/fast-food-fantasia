@@ -155,7 +155,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <p>
-                <span className="font-bold">4.9 / 5</span> από <span className="text-pumba-red font-bold">750+</span> κριτικές
+                <span className="font-bold">4.8/5</span> από <span className="text-pumba-red font-bold">150+</span> κριτικές
               </p>
             </div>
           </div>
