@@ -1,6 +1,8 @@
+
 import React, { useEffect } from 'react';
 import { ArrowDown, ShoppingBag, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -19,9 +21,11 @@ const Hero = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const handleOrderClick = () => {
     window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
   };
+
   return <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -36,7 +40,7 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <img src="/lovable-uploads/d0bd5513-09ad-4eab-85c2-fef3ef5f59ec.png" alt="Pumba Logo" className="w-64 md:w-80 animate-float" />
+              <img src="/lovable-uploads/58cf3ce1-5edd-4cab-9c05-be775f273bad.png" alt="Pumba Logo" className="w-64 md:w-80 animate-float" />
               <div className="absolute -top-6 left-1/2 -translate-x-1/2">
                 <div className="text-pumba-red animate-flame">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
@@ -72,4 +76,5 @@ const Hero = () => {
       </div>
     </div>;
 };
+
 export default Hero;
