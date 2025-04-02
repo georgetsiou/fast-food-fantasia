@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Instagram, ShoppingBag, X } from 'lucide-react';
+import React from 'react';
+import { MapPin, Phone, Mail, Instagram, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-
 const Footer = () => {
-  const [termsOpen, setTermsOpen] = useState(false);
-  
   const handleOrderClick = () => {
     window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
   };
-  
   return <footer className="bg-black pt-12 pb-6 text-white">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto px-4">
@@ -92,10 +82,7 @@ const Footer = () => {
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">
                 <li>
-                  <a href="#" onClick={(e) => {
-                    e.preventDefault();
-                    setTermsOpen(true);
-                  }} className="text-gray-400 hover:text-white transition-colors">Όροι χρήσης</a>
+                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Όροι χρήσης</a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors">Πολιτική απορρήτου</a>
@@ -105,49 +92,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      <Dialog open={termsOpen} onOpenChange={setTermsOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Όροι Χρήσης</DialogTitle>
-          </DialogHeader>
-          <div className="mt-4 space-y-4">
-            <div>
-              <h3 className="text-lg font-bold">1. Όροι Χρήσης</h3>
-              <div className="mt-2 space-y-2">
-                <div>
-                  <h4 className="font-semibold">1.1. Αποδοχή των Όρων</h4>
-                  <p className="text-gray-300">Με την πρόσβαση και τη χρήση αυτού του ιστότοπου, αποδέχεστε τους παρόντες Όρους Χρήσης και τη Πολιτική Απορρήτου.</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold">1.2. Χρήση του Ιστότοπου</h4>
-                  <p className="text-gray-300">Ο ιστότοπος προορίζεται για την πλατφόρμα online παραγγελιών fast food.</p>
-                  <p className="text-gray-300">Απαγορεύεται η χρήση για παράνομες ή αθέμιτες δραστηριότητες.</p>
-                  <p className="text-gray-300">Ο χρήστης είναι υπεύθυνος για την ακρίβεια των δεδομένων που εισάγει (π.χ. διεύθυνση, πληρωμή).</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold">1.3. Δικαιώματα Ιδιοκτησίας</h4>
-                  <p className="text-gray-300">Όλο το περιεχόμενο (κείμενο, γραφικά, λογότυπα) είναι ιδιοκτησία του ιστότοπου ή των συνεργατών του και προστατεύεται από πνευματικά δικαιώματα.</p>
-                  <p className="text-gray-300">Απαγορεύεται η αναπαραγωγή, διανομή ή τροποποίηση χωρίς άδεια.</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold">1.4. Αλλαγές & Διακοπή Λειτουργίας</h4>
-                  <p className="text-gray-300">Ο ιστότοπος διατηρεί το δικαίωμα να τροποποιεί τους Όρους χωρίς προειδοποίηση.</p>
-                  <p className="text-gray-300">Μπορεί να σταματήσει η λειτουργία για συντήρηση ή τεχνικούς λόγους.</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold">1.5. Περιορισμός Ευθύνης</h4>
-                  <p className="text-gray-300">Δεν ευθύνεται για ζημιές από τη χρήση ή την αδυναμία πρόσβασης στον ιστότοπο.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </footer>;
 };
 export default Footer;
