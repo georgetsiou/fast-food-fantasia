@@ -1,25 +1,17 @@
-
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
   const handleOrderClick = () => {
     window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
   };
-
-  return (
-    <footer className="bg-black pt-12 pb-6 text-white">
+  return <footer className="bg-black pt-12 pb-6 text-white">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center mb-4">
-                <img 
-                  src="/lovable-uploads/d0bd5513-09ad-4eab-85c2-fef3ef5f59ec.png" 
-                  alt="Pumba Logo" 
-                  className="h-16"
-                />
+                <img src="/lovable-uploads/d0bd5513-09ad-4eab-85c2-fef3ef5f59ec.png" alt="Pumba Logo" className="h-16" />
                 <h3 className="text-2xl font-bold ml-2">PUMBA</h3>
               </div>
               <p className="text-gray-400 mb-4">
@@ -57,24 +49,25 @@ const Footer = () => {
               <h3 className="text-xl font-bold mb-4">Ώρες Λειτουργίας</h3>
               <ul className="space-y-2">
                 <li className="flex justify-between">
-                  <span>Δευτέρα - Παρασκευή:</span>
-                  <span>11:00 - 00:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Σάββατο:</span>
-                  <span>11:00 - 01:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Κυριακή:</span>
+                  <span>Δευτέρα - Κυριακή: </span>
                   <span>12:00 - 00:00</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>
+                </span>
+                  <span>
+                </span>
+                </li>
+                <li className="flex justify-between">
+                  <span>
+                </span>
+                  <span>
+                </span>
                 </li>
               </ul>
               
               <div className="mt-6">
-                <Button
-                  className="btn-primary flex items-center gap-2"
-                  onClick={handleOrderClick}
-                >
+                <Button className="btn-primary flex items-center gap-2" onClick={handleOrderClick}>
                   <ShoppingBag size={18} />
                   Παραγγείλτε Τώρα
                 </Button>
@@ -99,8 +92,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
