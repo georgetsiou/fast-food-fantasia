@@ -39,7 +39,7 @@ const Location = () => {
                   <div>
                     <h3 className="font-bold text-xl mb-2">Ώρες Λειτουργίας</h3>
                     <div className="grid grid-cols-2 gap-2 text-gray-300">
-                      <p>Δευτέρα - Παρασκευή:</p>
+                      <p>Δευτέρα - Κυριακή:</p>
                       <p>12:00 - 00:00</p>
                       <p>Σάββατο:</p>
                       <p>11:00 - 01:00</p>
