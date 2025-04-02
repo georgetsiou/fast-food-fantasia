@@ -38,11 +38,9 @@ const Location = () => {
                   <div className="text-pumba-red mr-4 mt-1">
                     <Clock size={24} />
                   </div>
-                  <div className="w-full">
+                  <div>
                     <h3 className="font-bold text-xl mb-2">Ώρες Λειτουργίας</h3>
-                    <div className="text-gray-300 w-full">
-                      <p className="py-1 px-3 bg-black/30 rounded border border-gray-800 w-full">Δευτέρα-Κυριακή: 12:00 - 00:00</p>
-                    </div>
+                    <p className="text-gray-300">Δευτέρα-Κυριακή: 12:00 - 00:00</p>
                   </div>
                 </div>
                 
