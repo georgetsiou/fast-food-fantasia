@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { MapPin, Clock, Phone, Mail, Instagram } from 'lucide-react';
+
 const Location = () => {
   return <div id="location" className="section bg-black">
       <div className="container mx-auto">
@@ -36,19 +38,10 @@ const Location = () => {
                   <div className="text-pumba-red mr-4 mt-1">
                     <Clock size={24} />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <h3 className="font-bold text-xl mb-2">Ώρες Λειτουργίας</h3>
-                    <div className="grid grid-cols-2 gap-2 text-gray-300">
-                      <p>Δευτέρα-Κυριακή: 12:00 - 00:00</p>
-                      <p> </p>
-                      <p>
-                    </p>
-                      <p>
-                    </p>
-                      <p>
-                    </p>
-                      <p>
-                    </p>
+                    <div className="text-gray-300 w-full">
+                      <p className="py-1 px-3 bg-black/30 rounded border border-gray-800 w-full">Δευτέρα-Κυριακή: 12:00 - 00:00</p>
                     </div>
                   </div>
                 </div>
@@ -104,4 +97,5 @@ const Location = () => {
       </div>
     </div>;
 };
+
 export default Location;
