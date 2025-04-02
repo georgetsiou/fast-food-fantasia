@@ -41,10 +41,14 @@ const Location = () => {
                     <div className="grid grid-cols-2 gap-2 text-gray-300">
                       <p>Δευτέρα - Κυριακή:</p>
                       <p>12:00 - 00:00</p>
-                      <p>Σάββατο:</p>
-                      <p>11:00 - 01:00</p>
-                      <p>Κυριακή:</p>
-                      <p>12:00 - 00:00</p>
+                      <p>
+                    </p>
+                      <p>
+                    </p>
+                      <p>
+                    </p>
+                      <p>
+                    </p>
                     </div>
                   </div>
                 </div>
