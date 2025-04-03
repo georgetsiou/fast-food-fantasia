@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -35,6 +34,26 @@ const menuItems = [
         name: "Πατάτες τηγανητές",
         description: "Φρεσκοκομμένες πατάτες τηγανητές",
         price: "3,50€"
+      },
+      {
+        name: "Φέτα",
+        description: "Πιάτο δίχως φέτα δεν έχει νοστιμάδα! Πρόσθεσε φέτα στην παραγγελία σου και συνδύασέ την με σαλάτα για ένα ολοκληρωμένο γεύμα.",
+        price: "3,50€"
+      },
+      {
+        name: "Καυτερή πιπεριά",
+        description: "",
+        price: "1,50€"
+      },
+      {
+        name: "Πίτα παραδοσιακή",
+        description: "Σκέτη",
+        price: "0,50€"
+      },
+      {
+        name: "Ψωμί",
+        description: "Μερίδα",
+        price: "0,50€"
       }
     ]
   },
@@ -54,12 +73,12 @@ const menuItems = [
       },
       {
         name: "Χωριάτικη",
-        description: "Ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, ελιές & φέτα ΠΟΠ",
+        description: "Ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, ελιές & φέτα ΠΟП",
         price: "7,40€"
       },
       {
         name: "Ντάκος",
-        description: "Καρέ ντομάτας, κρεμμύδι, ελιές, κάππαρη, φέτα ΠΟΠ & κρητικό ντάκο",
+        description: "Καρέ ντομάτας, κρεμμύδι, ελιές, κάππαρη, φέτα ΠΟП & κρητικό ντάκο",
         price: "6,00€"
       }
     ]
