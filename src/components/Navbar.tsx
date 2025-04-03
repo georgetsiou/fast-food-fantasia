@@ -33,7 +33,6 @@ const Navbar = () => {
           <a href="#menu" className="text-white hover:text-pumba-red transition-colors">Μενού</a>
           <a href="#about" className="text-white hover:text-pumba-red transition-colors">Σχετικά</a>
           <a href="#location" className="text-white hover:text-pumba-red transition-colors">Τοποθεσία</a>
-          <a href="#contact" className="text-white hover:text-pumba-red transition-colors">Επικοινωνία</a>
         </div>
         
         <div className="hidden md:flex items-center space-x-4">
@@ -65,7 +64,6 @@ const Navbar = () => {
           <a href="#menu" className="text-2xl text-white hover:text-pumba-red transition-colors" onClick={toggleMenu}>Μενού</a>
           <a href="#about" className="text-2xl text-white hover:text-pumba-red transition-colors" onClick={toggleMenu}>Σχετικά</a>
           <a href="#location" className="text-2xl text-white hover:text-pumba-red transition-colors" onClick={toggleMenu}>Τοποθεσία</a>
-          <a href="#contact" className="text-2xl text-white hover:text-pumba-red transition-colors" onClick={toggleMenu}>Επικοινωνία</a>
           
           <a href="tel:2310799500" className="flex items-center text-white hover:text-pumba-red">
             <Phone size={18} className="mr-2" />
