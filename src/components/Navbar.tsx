@@ -29,7 +29,7 @@ const Navbar = () => {
           <span className="text-pumba-red">P</span>umba
         </a>
         
-        <div className="hidden md:flex space-x-8 justify-center mx-auto">
+        <div className="hidden md:flex space-x-8">
           <a href="#menu" className="text-white hover:text-pumba-red transition-colors">Μενού</a>
           <a href="#about" className="text-white hover:text-pumba-red transition-colors">Σχετικά</a>
           <a href="#location" className="text-white hover:text-pumba-red transition-colors">Τοποθεσία</a>
