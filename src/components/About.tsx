@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Users, Award, Clock } from 'lucide-react';
-
 const About = () => {
-  return (
-    <div id="about" className="section bg-gradient-to-b from-black to-gray-900">
+  return <div id="about" className="section bg-gradient-to-b from-black to-gray-900">
       <div className="container mx-auto">
         <div className="max-w-5xl mx-auto">
           <h2 className="section-title text-center reveal">
@@ -14,10 +11,7 @@ const About = () => {
           <div className="reveal">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h3 className="text-3xl font-bold mb-4">Η ιστορία του <span className="text-pumba-red">PUMBA</span></h3>
-              <p className="text-gray-300 mb-6">
-                Από το 2015, το Pumba έφερε μια φρέσκια προσέγγιση στον παραδοσιακό ελληνικό γύρο στην καρδιά της Θεσσαλονίκης. 
-                Με πάθος για την ποιότητα και την αυθεντικότητα, δημιουργήσαμε ένα μέρος όπου η παράδοση συναντά την καινοτομία.
-              </p>
+              <p className="text-gray-300 mb-6">Από το 2023, το Pumba έφερε μια φρέσκια προσέγγιση στον παραδοσιακό ελληνικό γύρο στην καρδιά της Σίνδου Θεσσαλονίκης. Με πάθος για την ποιότητα και την αυθεντικότητα, δημιουργήσαμε ένα μέρος όπου η παράδοση συναντά την καινοτομία.</p>
               <p className="text-gray-300 mb-8">
                 Κάθε πιάτο μας παρασκευάζεται με αγάπη, χρησιμοποιώντας τα πιο φρέσκα υλικά και παραδοσιακές συνταγές, προσφέροντας μια αξέχαστη γευστική εμπειρία σε κάθε επισκέπτη.
               </p>
@@ -57,8 +51,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
