@@ -1,7 +1,7 @@
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -59,12 +59,17 @@ const menuItems = [
   },
   {
     category: "Σαλάτες",
-    icon: <Pizza className="text-pumba-red" size={24} />,
+    icon: <Salad className="text-pumba-red" size={24} />,
     items: [
       {
         name: "Caesar's",
         description: "Σαλάτα με iceberg, ντοματίνια, κρουτόν, μπέικον, κοτόπουλο, καλαμπόκι, παρμεζάνα",
         price: "7,40€"
+      },
+      {
+        name: "Healthy",
+        description: "Σαλάτα με ανάμεικτα baby λαχανικά, φιλέτο πράσινου μήλου, πούδρα παρμεζάνας, μαύρο σουσάμι, ντοματίνια, ξηροί καρποί & dressing βαλσάμικο",
+        price: "6,20€"
       },
       {
         name: "Pumba",
@@ -80,6 +85,21 @@ const menuItems = [
         name: "Ντάκος",
         description: "Καρέ ντομάτας, κρεμμύδι, ελιές, κάππαρη, φέτα ΠΟП & κρητικό ντάκο",
         price: "6,00€"
+      },
+      {
+        name: "Αγγουροντομάτα",
+        description: "Σαλάτα με ντομάτα, αγγούρι, φρέσκο κρεμμύδι, ξηρό κρεμμύδι, πιπεριά πράσινη & πιπεριά κόκκινη",
+        price: "5,00€"
+      },
+      {
+        name: "Πικάντικη",
+        description: "Σαλάτα με λάχανο λευκό, λάχανο κόκκινο, καρότο, πιπεριά πράσινη & σέλινο",
+        price: "4,50€"
+      },
+      {
+        name: "Μαρούλι",
+        description: "Σαλάτα με μαρούλι, αγγούρι & φρέσκο κρεμμύδι",
+        price: "4,50€"
       }
     ]
   },
