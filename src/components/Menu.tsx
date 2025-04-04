@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -93,13 +94,89 @@ const menuItems = [
       },
       {
         name: "Πικάντικη",
-        description: "Σαλάτα με λάχανο λε��κό, λάχανο κόκκινο, καρότο, πιπεριά πράσινη & σέλινο",
+        description: "Σαλάτα με λάχανο λευκό, λάχανο κόκκινο, καρότο, πιπεριά πράσινη & σέλινο",
         price: "4,50€"
       },
       {
         name: "Μαρούλι",
         description: "Σαλάτα με μαρούλι, αγγούρι & φρέσκο κρεμμύδι",
         price: "4,50€"
+      }
+    ]
+  },
+  {
+    category: "Τεμάχια",
+    icon: <Beef className="text-pumba-red" size={24} />,
+    items: [
+      {
+        name: "Σουβλάκι χοιρινό",
+        description: "",
+        price: "Από 1,60€"
+      },
+      {
+        name: "Πανσέτα",
+        description: "",
+        price: "Από 1,60€"
+      },
+      {
+        name: "Φιλέτο κοτόπουλο μπούτι",
+        description: "",
+        price: "Από 2,40€"
+      },
+      {
+        name: "Φιλέτο κοτόπουλο στήθος",
+        description: "",
+        price: "Από 2,10€"
+      },
+      {
+        name: "Σουβλάκι κοτόπουλο",
+        description: "",
+        price: "Από 1,60€"
+      },
+      {
+        name: "Κοτομπέικον",
+        description: "",
+        price: "Από 1,90€"
+      },
+      {
+        name: "Σνίτσελ κοτόπουλο",
+        description: "",
+        price: "Από 2,00€"
+      },
+      {
+        name: "Λουκάνικο Βαυαρίας",
+        description: "",
+        price: "Από 1,90€"
+      },
+      {
+        name: "Σουτζουκάκι",
+        description: "",
+        price: "Από 1,60€"
+      },
+      {
+        name: "Σουτζουκάκι γεμιστό με Philadelphia",
+        description: "",
+        price: "Από 2,00€"
+      },
+      {
+        name: "Μπιφτέκι μοσχαρίσιο",
+        description: "",
+        price: "Από 2,10€"
+      },
+      {
+        name: "Μπιφτέκι γεμιστό με gouda",
+        description: "",
+        price: "Από 2,00€"
+      },
+      {
+        name: "Μπιφτέκι λαχανικών",
+        description: "",
+        price: "Από 1,90€"
+      },
+      {
+        name: "Σουβλάκι μανιτάρια & ντοματίνια",
+        description: "",
+        price: "Από 1,50€"
       }
     ]
   },
