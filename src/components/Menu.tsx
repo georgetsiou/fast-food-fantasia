@@ -93,7 +93,7 @@ const menuItems = [
       },
       {
         name: "Πικάντικη",
-        description: "Σαλάτα με λάχανο λευκό, λάχανο κόκκινο, καρότο, πιπεριά πράσινη & σέλινο",
+        description: "Σαλάτα με λάχανο λε��κό, λάχανο κόκκινο, καρότο, πιπεριά πράσινη & σέλινο",
         price: "4,50€"
       },
       {
@@ -200,9 +200,34 @@ const menuItems = [
         price: "5,00€"
       },
       {
+        name: "Ham burger",
+        description: "Ψωμάκι brioche με σουσάμι με μπιφτέκι μοσχαρίσιο, ντομάτα, αγγουρομαγιονέζα, ketchup & μουστάρδα",
+        price: "4,80€"
+      },
+      {
         name: "Crispy Schnitzel Burger",
         description: "Ψωμάκι brioche με σνίτσελ κοτόπουλο, μπέικον, ντομάτα & iceberg",
         price: "5,00€"
+      },
+      {
+        name: "Soki's burger",
+        description: "Ψωμάκι brioche με μπιφτέκι μοσχαρίσιο, λιωμένο cheddar, ντομάτα, sweet chili & μαγιονέζα μαύρης τρούφας",
+        price: "6,40€"
+      },
+      {
+        name: "Nala's burger",
+        description: "Ψωμάκι brioche με mesclun, chutney ντομάτας, κεφαλοτύρι σαγανάκι, πίκλες αγγουριού & ντομάτα",
+        price: "4,90€"
+      },
+      {
+        name: "Vegetarian burger",
+        description: "Ψωμάκι brioche με μπιφτέκι λαχανικών, iceberg, ντομάτα, σως ταχίνι, ketchup & μουστάρδα",
+        price: "4,30€"
+      },
+      {
+        name: "Kid's burger",
+        description: "Ψωμάκι brioche με μπιφτέκι μοσχαρίσιο, ketchup & μουστάρδα",
+        price: "3,70€"
       },
       {
         name: "Chaos Burger",
@@ -222,18 +247,88 @@ const menuItems = [
       },
       {
         name: "Coca-Cola Zero 330ml",
-        description: "Χωρίς ζάχαρη και θερμίδες",
+        description: "Η Coca-Cola Zero είναι η ιδανική επιλογή για όσους θέλουν την υπέροχη αυθεντική γεύση της Coca‑Cola, χωρίς ζάχαρη και θερμίδες",
+        price: "1,80€"
+      },
+      {
+        name: "Coca-Cola Stevia 330ml",
+        description: "Με τη Coca-Cola Stevia απολαμβάνετε τη μοναδική, δροσιστική γεύση της Coca-Cola χωρίς θερμίδες και ζάχαρη, με γλυκαντικό από το φυτό Στέβια",
+        price: "1,80€"
+      },
+      {
+        name: "Coca-Cola Zero Lemon 330ml",
+        description: "Με τη νέα Coca-Cola Zero Λεμόνι, μπορείτε να απολαμβάνετε την υπέροχη γεύση της Coca-Cola Zero, χωρίς ζάχαρη και θερμίδες και με μοναδική γεύση λεμόνι",
+        price: "1,80€"
+      },
+      {
+        name: "Fanta Κόκκινη 330ml",
+        description: "Η Πορτοκαλάδα Fanta είναι η αγαπημένη πορτοκαλάδα των εφήβων στην Ελλάδα. Περιέχει 20% χυμό πορτοκαλιού",
+        price: "1,80€"
+      },
+      {
+        name: "Fanta Λεμόνι 330ml",
+        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρώματα λεμονιού και αμέτρητες φυσαλίδες",
         price: "1,80€"
       },
       {
         name: "Sprite 330ml",
-        description: "Αναζωογονητική λεμονάδα",
+        description: "Το πρώτο κουτάκι Sprite άνοιξε το 1961 και από τότε κρατάει δροσερή την κορυφή της κατηγορίας αναψυκτικών lemon-lime",
+        price: "1,80€"
+      },
+      {
+        name: "Schweppes Soda Water 330ml",
+        description: "Το πρώτο ανθρακούχο αναψυκτικό στον κόσμο, διατηρεί μέχρι και σήμερα την αυθεντική συνταγή του Jacob Schweppe από το 1783",
+        price: "1,80€"
+      },
+      {
+        name: "Coca-Cola 500ml",
+        description: "Κλασική Coca-Cola σε μεγαλύτερη συσκευασία",
+        price: "2,20€"
+      },
+      {
+        name: "Coca-Cola Zero 500ml",
+        description: "Coca-Cola Zero χωρίς ζάχαρη και θερμίδες σε μεγαλύτερη συσκευασία",
+        price: "2,20€"
+      },
+      {
+        name: "Fanta Κόκκινη 500ml",
+        description: "Η Πορτοκαλάδα Fanta με 20% χυμό πορτοκαλιού σε μεγαλύτερη συσκευασία",
+        price: "2,20€"
+      },
+      {
+        name: "Fanta Λεμόνι 500ml",
+        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού σε μεγαλύτερη συσκευασία",
+        price: "2,20€"
+      },
+      {
+        name: "Amita Πορτοκάλι, Μήλο & Καρότο 330ml",
+        description: "100% Φυσικός χυμός φρούτων χωρίς προσθήκη ζάχαρης με γεύση μήλο-πορτοκάλι-καρότο",
+        price: "1,50€"
+      },
+      {
+        name: "Amita Motion 330ml",
+        description: "Ο πρώτος πολυβιταμινούχος 100% φυσικός χυμός με 9 φρούτα και 7 βιταμίνες",
+        price: "1,80€"
+      },
+      {
+        name: "Lipton Ice Tea Λεμόνι 330ml",
+        description: "Με την ηλιόλουστη, αναζωογονητική του γεύση και το νόστιμο μείγμα από φύλλα τσαγιού και λεμόνι",
+        price: "1,80€"
+      },
+      {
+        name: "Lipton Ice Tea Ροδάκινο 330ml",
+        description: "Πιές μια γουλιά για να νιώσεις μια έκρηξη γεύσης ροδάκινου μαζί με φρουτώδη γεύση",
         price: "1,80€"
       },
       {
         name: "Νερό 500ml",
         description: "Εμφιαλωμένο νερό",
         price: "0,50€"
+      },
+      {
+        name: "Νερό 1.5lt",
+        description: "Το νερό είναι ιδανικό για να σας ξεδιψάσει και να σας αναζωογονήσει κάθε στιγμή της ημέρας",
+        price: "1,00€"
       }
     ]
   }
