@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -647,4 +648,95 @@ const Menu = () => {
       // Mobile: 2 columns layout
       // Create left and right column arrays
       const leftColumn = menuItems.filter((_, idx) => idx % 2 === 0);
-      const rightColumn = menuItems.filter((_, idx) => idx % 2
+      const rightColumn = menuItems.filter((_, idx) => idx % 2 === 1);
+      
+      return (
+        <div className="grid grid-cols-2 gap-2">
+          <div className="space-y-8">
+            {leftColumn.map((category, idx) => (
+              <div key={idx} className="reveal">
+                <div className="flex items-center gap-2 mb-2">
+                  {category.icon}
+                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
+                </div>
+                <div className="space-y-4">
+                  {category.items.map((item, itemIdx) => (
+                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                      <div className="p-2">
+                        <div className="flex flex-col mb-1">
+                          <h4 className="text-sm font-bold">{item.name}</h4>
+                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-xs">{item.description}</p>
+                        {item.featured && <div className="mt-1">
+                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
+                            ΠΡΟΤΕΙΝΟΜΕΝΟ
+                          </span>
+                        </div>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="space-y-8">
+            {rightColumn.map((category, idx) => (
+              <div key={idx} className="reveal">
+                <div className="flex items-center gap-2 mb-2">
+                  {category.icon}
+                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
+                </div>
+                <div className="space-y-4">
+                  {category.items.map((item, itemIdx) => (
+                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                      <div className="p-2">
+                        <div className="flex flex-col mb-1">
+                          <h4 className="text-sm font-bold">{item.name}</h4>
+                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
+                        </div>
+                        <p className="text-gray-300 text-xs">{item.description}</p>
+                        {item.featured && <div className="mt-1">
+                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
+                            ΠΡΟΤΕΙΝΟΜΕΝΟ
+                          </span>
+                        </div>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+  };
+
+  return (
+    <section id="menu" className="py-20 bg-gray-950 relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-white mb-4">Μενού</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Απολαύστε την αυθεντική ελληνική γεύση με τα φρέσκα υλικά και τις παραδοσιακές συνταγές μας
+          </p>
+        </div>
+        
+        {getMenuLayout()}
+        
+        <div className="text-center mt-12">
+          <Button 
+            onClick={handleOrderClick}
+            className="bg-pumba-red hover:bg-red-700 text-white px-8 py-6 rounded-full text-xl transition-all duration-300 transform hover:scale-105"
+          >
+            <ShoppingBag className="mr-2" />
+            Παραγγείλετε Online
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Menu;
