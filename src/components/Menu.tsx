@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -211,7 +210,7 @@ const menuItems = [
       },
       {
         name: "Φιλέτο κοτόπουλο μπούτι σε σάντουιτς",
-        description: "Σάντουιτς φιλέτο κοτόπουλο μπούτι με τα υλικά της επιλογής σας",
+        description: "Σάντουιτς φιλέτο κο��όπουλο μπούτι με τα υλικά της επιλογής σας",
         price: "Από 4,00€"
       },
       {
@@ -423,6 +422,23 @@ const menuItems = [
         name: "Καλαμαράκια πανέ μερίδα",
         description: "Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
         price: "8,10€"
+      }
+    ]
+  },
+  {
+    category: "Club Sandwiches",
+    icon: <Sandwich className="text-pumba-red" size={24} />,
+    items: [
+      {
+        name: "Club sandwich κλασικό",
+        description: "Με ζαμπόν, μπέικον, gouda, ντομάτα, μαρούλι & μαγιονέζα. Συνοδεύεται από πατάτες τηγανητές",
+        price: "Από 6,00€",
+        featured: true
+      },
+      {
+        name: "Club sandwich κοτόπουλο",
+        description: "Με φιλέτο κοτόπουλο, ζαμπόν, μπέικον, gouda, ντομάτα, μαρούλι & μαγιονέζα. Συνοδεύεται από πατάτες τηγανητές",
+        price: "Από 6,70€"
       }
     ]
   },
