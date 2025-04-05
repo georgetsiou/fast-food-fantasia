@@ -349,8 +349,78 @@ const menuItems = [
         price: "7,80€"
       },
       {
+        name: "Σουβλάκι κοτόπουλο μερίδα",
+        description: "4 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "7,80€"
+      },
+      {
+        name: "Πανσέτα μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "7,70€"
+      },
+      {
+        name: "Φιλέτο κοτόπουλο στήθος μερίδα",
+        description: "2 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "7,70€"
+      },
+      {
+        name: "Φιλέτο κοτόπουλο μπούτι μερίδα",
+        description: "2 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "7,70€"
+      },
+      {
+        name: "Κοτομπουκιές μερίδα",
+        description: "Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "7,70€"
+      },
+      {
+        name: "Κοτομπέικον μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "8,10€"
+      },
+      {
+        name: "Σνίτσελ κοτόπουλο μερίδα",
+        description: "2 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "7,70€"
+      },
+      {
+        name: "Λουκάνικο Βαυαρίας μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "7,70€"
+      },
+      {
+        name: "Σουτζουκάκι μερίδα",
+        description: "4 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "7,80€"
+      },
+      {
+        name: "Σουτζουκάκι γεμιστό με Philadelphia μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "8,10€"
+      },
+      {
         name: "Μπιφτέκι Μοσχαρίσιο",
         description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "8,10€"
+      },
+      {
+        name: "Μπιφτέκι γεμιστό με gouda μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "7,70€"
+      },
+      {
+        name: "Μπιφτέκι λαχανικών μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "7,30€"
+      },
+      {
+        name: "Σουβλάκι μανιτάρια & ντοματίνια μερίδα",
+        description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "6,50€"
+      },
+      {
+        name: "Καλαμαράκια πανέ μερίδα",
+        description: "Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
         price: "8,10€"
       }
     ]
@@ -577,99 +647,4 @@ const Menu = () => {
       // Mobile: 2 columns layout
       // Create left and right column arrays
       const leftColumn = menuItems.filter((_, idx) => idx % 2 === 0);
-      const rightColumn = menuItems.filter((_, idx) => idx % 2 === 1);
-      
-      return (
-        <div className="grid grid-cols-2 gap-3">
-          {/* Left Column */}
-          <div className="space-y-5">
-            {leftColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-1 mb-3">
-                  {category.icon}
-                  <h3 className="text-lg font-bold text-pumba-red">{category.category}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
-                      <div className="p-3">
-                        <div className="flex justify-between items-start mb-1">
-                          <h4 className="text-sm font-bold">{item.name}</h4>
-                          <span className="text-pumba-gold text-sm font-bold">{item.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-2">
-                          <span className="bg-pumba-red text-white px-2 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Right Column */}
-          <div className="space-y-5">
-            {rightColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-1 mb-3">
-                  {category.icon}
-                  <h3 className="text-lg font-bold text-pumba-red">{category.category}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
-                      <div className="p-3">
-                        <div className="flex justify-between items-start mb-1">
-                          <h4 className="text-sm font-bold">{item.name}</h4>
-                          <span className="text-pumba-gold text-sm font-bold">{item.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-2">
-                          <span className="bg-pumba-red text-white px-2 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    }
-  };
-
-  return <div id="menu" className="section bg-black text-white">
-    <div className="container mx-auto">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="section-title text-center reveal">
-          <span className="text-pumba-red">Μ</span>ενού
-        </h2>
-        <p className="text-center text-lg mb-12 max-w-2xl mx-auto reveal">
-          Απολαύστε αυθεντικές ελληνικές γεύσεις, φτιαγμένες με τα καλύτερα υλικά και πολλή αγάπη
-        </p>
-        
-        {getMenuLayout()}
-        
-        <div className="text-center mt-16 reveal">
-          <p className="text-lg mb-6">Θέλετε να δείτε το πλήρες μενού μας;</p>
-          <div className="flex justify-center">
-            <Button onClick={handleOrderClick} className="btn-primary flex items-center gap-2 text-base">
-              <ShoppingBag size={18} />
-              Παραγγείλτε Online
-              <ExternalLink size={16} />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>;
-};
-
-export default Menu;
+      const rightColumn = menuItems.filter((_, idx) => idx % 2
