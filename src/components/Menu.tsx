@@ -384,7 +384,7 @@ const menuItems = [
       },
       {
         name: "Καλαμάκι Κοτόπουλο",
-        description: "Πίτα, καλαμάκι κοτόπουλ��, ντομάτα, κρεμμύδι, πατάτες, σως",
+        description: "Πίτα, ��αλαμάκι κοτόπουλ��, ντομάτα, κρεμμύδι, πατάτες, σως",
         price: "3,80€"
       }
     ]
@@ -649,6 +649,24 @@ const menuItems = [
         name: "Chaos Burger",
         description: "Ψωμάκι brioche με μπιφτέκι Black Angus 150gr, μπέικον & σως Jack Daniel's",
         price: "8,30€"
+      }
+    ]
+  },
+  {
+    category: "Το κιλό",
+    icon: <Beef className="text-pumba-red" size={24} />,
+    items: [
+      {
+        name: "Παϊδάκια αρνίσια",
+        description: "Η τελική τιμή του προϊόντος θα διαμορφωθεί κατά το ζύγισμα",
+        price: "Από 19,00€",
+        featured: true
+      },
+      {
+        name: "Ολόκληρο κοτόπουλο σχάρας άνευ οστού",
+        description: "Συνοδεύεται από πατάτες τηγανητές, κεφαλοτύρι & dressing λεμονιού",
+        price: "13,50€",
+        featured: true
       }
     ]
   },
