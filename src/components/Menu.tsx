@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
+// New menu items with Greek food
 const menuItems = [
   {
     category: "Αλοιφές",
@@ -459,7 +460,7 @@ const menuItems = [
         price: "8,10€"
       },
       {
-        name: "Μπιφτέκι Μοσχαρ��σιο",
+        name: "Μπιφτέκι Μοσχαρίσιο",
         description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
         price: "8,10€"
       },
