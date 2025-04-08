@@ -1,7 +1,7 @@
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -93,7 +93,7 @@ const menuItems = [
       },
       {
         name: "Πατάτες τηγανητές",
-        description: "Φρεσκ��κομμένες πατάτες τηγανητές",
+        description: "Φρεσκ���κομμένες πατάτες τηγανητές",
         price: "3,50€"
       },
       {
@@ -300,7 +300,7 @@ const menuItems = [
         price: "Από 3,90€"
       },
       {
-        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτς",
+        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτ��",
         description: "Σάντουιτς σουτζουκάκι γεμιστό με Philadelphia με τα υλικά της επιλογής σας",
         price: "Από 4,20€"
       },
@@ -671,6 +671,68 @@ const menuItems = [
     ]
   },
   {
+    category: "Μπύρες/Ποτά",
+    icon: <Beer className="text-pumba-red" size={24} />,
+    items: [
+      {
+        name: "Amstel 330ml",
+        description: "",
+        price: "2,60€"
+      },
+      {
+        name: "Heineken 330ml",
+        description: "",
+        price: "2,60€"
+      },
+      {
+        name: "Άλφα 330ml",
+        description: "",
+        price: "2,60€"
+      },
+      {
+        name: "Fischer φιάλη 500ml",
+        description: "",
+        price: "3,60€"
+      },
+      {
+        name: "Άλφα φιάλη 500ml",
+        description: "",
+        price: "3,30€"
+      },
+      {
+        name: "Amstel φιάλη 500ml",
+        description: "",
+        price: "3,30€"
+      },
+      {
+        name: "Amstel free φιάλη 500ml",
+        description: "",
+        price: "3,00€"
+      },
+      {
+        name: "Amstel Radler φιάλη 500ml",
+        description: "",
+        price: "3,30€"
+      },
+      {
+        name: "Μάμος φιάλη 500ml",
+        description: "",
+        price: "3,30€"
+      },
+      {
+        name: "Mythos φιάλη 500ml",
+        description: "",
+        price: "3,30€"
+      },
+      {
+        name: "Kaiser φιάλη 500ml",
+        description: "",
+        price: "3,60€"
+      }
+    ]
+  },
+  
+  {
     category: "Αναψυκτικά",
     icon: <Coffee className="text-pumba-red" size={24} />,
     items: [
@@ -701,7 +763,7 @@ const menuItems = [
       },
       {
         name: "Fanta Λεμόνι 330ml",
-        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρώματα λεμονιού και αμέτρητες φυσαλίδες",
+        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρ��ματα λεμονιού και αμέτρητες φυσαλίδες",
         price: "1,80€"
       },
       {
