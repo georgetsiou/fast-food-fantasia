@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -866,52 +865,33 @@ const Menu = () => {
   // Split categories for mobile view
   const getMenuLayout = () => {
     if (!isMobile) {
-      // Desktop: 3 columns with grid layout for better space usage
-      const columnCount = 3; // Increase columns from 2 to 3
-      const columnsArray = Array.from({ length: columnCount }, () => []);
-      
-      // Distribute menu items evenly across columns based on total item count
-      menuItems.forEach((category, idx) => {
-        columnsArray[idx % columnCount].push(category);
-      });
-      
+      // Desktop: 2 columns as original
       return (
-        <div className="grid grid-cols-3 gap-4">
-          {columnsArray.map((columnCategories, colIdx) => (
-            <div key={colIdx} className="space-y-4">
-              {columnCategories.map((category, catIdx) => (
-                <div key={catIdx} className="reveal">
-                  <div className="flex items-center gap-2 mb-3 bg-gray-900/30 p-2 rounded-lg">
-                    {category.icon}
-                    <h3 className="text-xl font-bold text-pumba-red">{category.category}</h3>
-                  </div>
-                  <div className="space-y-2">
-                    {category.items.map((item, itemIdx) => (
-                      <div 
-                        key={itemIdx} 
-                        className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border-l-4 border-pumba-red shadow-[0_0_10px_rgba(255,30,30,0.2)]' : 'border border-transparent'}`}
-                      >
-                        <div className="p-3">
-                          <div className="flex justify-between items-start mb-1">
-                            <h4 className="text-lg font-bold">{item.name}</h4>
-                            <span className="text-pumba-gold font-bold ml-2 whitespace-nowrap">{item.price}</span>
-                          </div>
-                          {item.description && (
-                            <p className="text-gray-300 text-sm">{item.description}</p>
-                          )}
-                          {item.featured && (
-                            <div className="mt-2">
-                              <span className="bg-pumba-red text-white px-2 py-1 rounded-full text-xs font-bold">
-                                ΠΡΟΤΕΙΝΟΜΕΝΟ
-                              </span>
-                            </div>
-                          )}
-                        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {menuItems.map((category, idx) => (
+            <div key={idx} className="reveal">
+              <div className="flex items-center gap-2 mb-4">
+                {category.icon}
+                <h3 className="text-2xl font-bold text-pumba-red">{category.category}</h3>
+              </div>
+              <div className="space-y-6">
+                {category.items.map((item, itemIdx) => (
+                  <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                    <div className="p-4">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="text-xl font-bold">{item.name}</h4>
+                        <span className="text-pumba-gold font-bold">{item.price}</span>
                       </div>
-                    ))}
+                      <p className="text-gray-300">{item.description}</p>
+                      {item.featured && <div className="mt-3">
+                        <span className="bg-pumba-red text-white px-2 py-1 rounded-full text-xs font-bold">
+                          ΠΡΟΤΕΙΝΟΜΕΝΟ
+                        </span>
+                      </div>}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -986,18 +966,18 @@ const Menu = () => {
   };
 
   return (
-    <section id="menu" className="py-16 bg-gray-950 relative">
-      <div className="container mx-auto px-2 max-w-7xl">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white mb-3">Μενού</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+    <section id="menu" className="py-20 bg-gray-950 relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-bold text-white mb-4">Μενού</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Απολαύστε την αυθεντική ελληνική γεύση με τα φρέσκα υλικά και τις παραδοσιακές συνταγές μας
           </p>
         </div>
         
         {getMenuLayout()}
         
-        <div className="text-center mt-10">
+        <div className="text-center mt-12">
           <Button 
             onClick={handleOrderClick}
             className="bg-pumba-red hover:bg-red-700 text-white px-8 py-6 rounded-full text-xl transition-all duration-300 transform hover:scale-105"
