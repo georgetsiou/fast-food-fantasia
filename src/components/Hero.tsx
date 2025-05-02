@@ -43,8 +43,11 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/b01bad29-fcf8-498b-b33e-99a92d9d382d.png" 
                 alt="Pumba Logo" 
-                className="w-64 md:w-80 animate-float" 
-                style={{ animation: 'float 3s ease-in-out infinite' }}
+                className="w-64 md:w-80" 
+                style={{ 
+                  animation: 'float 3s ease-in-out infinite',
+                  filter: 'drop-shadow(0 0 10px rgba(255,30,30,0.4))'
+                }}
               />
               <div className="absolute -top-6 left-1/2 -translate-x-1/2">
                 <div className="text-pumba-red animate-flame">
