@@ -26,7 +26,7 @@ const Hero = () => {
     window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
   };
 
-  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  return <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
@@ -40,15 +40,7 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/b01bad29-fcf8-498b-b33e-99a92d9d382d.png" 
-                alt="Pumba Logo" 
-                className="w-64 md:w-80" 
-                style={{ 
-                  animation: 'float 3s ease-in-out infinite',
-                  filter: 'drop-shadow(0 0 10px rgba(255,30,30,0.4))'
-                }}
-              />
+              <img src="/lovable-uploads/58cf3ce1-5edd-4cab-9c05-be775f273bad.png" alt="Pumba Logo" className="w-64 md:w-80 animate-float" />
               <div className="absolute -top-6 left-1/2 -translate-x-1/2">
                 <div className="text-pumba-red animate-flame">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
