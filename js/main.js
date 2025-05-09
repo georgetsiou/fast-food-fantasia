@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Desktop testimonials
     const desktopTestimonials = document.querySelector('.desktop-testimonials');
     if (desktopTestimonials) {
-      testimonials.forEach(testimonial => {
+      testimonials.slice(0, 6).forEach(testimonial => {
         desktopTestimonials.appendChild(createTestimonialCard(testimonial));
       });
     }
