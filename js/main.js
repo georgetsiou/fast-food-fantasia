@@ -1,305 +1,185 @@
+// Menu data
+const menuItems = [
+  {
+    category: "Αλοιφές",
+    icon: "utensils",
+    items: [
+      {
+        name: "Χτυπητή",
+        description: "",
+        price: "Από 0,50€"
+      },
+      {
+        name: "Τζατζίκι",
+        description: "Εδώ δεν χωράνε συστάσεις. Τζατζίκι, το κλασικό, το αληθινό, το αγαπημένο. Ζήτα άδεια από τους παρευρισκόμενους και κατανάλωσε εντελώς ανεύθυνα!",
+        price: "Από 0,50€"
+      },
+      {
+        name: "Ουγγαρέζα",
+        description: "Στα σος κάθε γεύματος, οι σως που το συνοδεύουν!",
+        price: "Από 0,50€"
+      },
+      {
+        name: "Μαγιονέζα",
+        description: "Λέγεται μαγιονέζα και θα έπρεπε να γράφεται \"μαγιονΑΙζα\" αφού από όλους, παίρνει ένα μεγάλο ΝΑΙ!",
+        price: "Από 0,50€"
+      }
+    ]
+  },
+  {
+    category: "Ορεκτικά",
+    icon: "utensils",
+    items: [
+      {
+        name: "Hakuna Patata",
+        description: "Πατάτες τηγανητές με λιωμένο cheddar & crispy μπέικον",
+        price: "5,80€"
+      },
+      {
+        name: "Μπουγιουρντί",
+        description: "Παραδοσιακό μπουγιουρντί σε πήλινο με φέτα",
+        price: "5,80€"
+      },
+      {
+        name: "Κροκέτες 4 τυριών",
+        description: "4 Τεμάχια. Συνοδεύονται από μαρμελάδα ντομάτας",
+        price: "5,60€"
+      }
+    ]
+  },
+  {
+    category: "Σαλάτες",
+    icon: "salad-bowl",
+    items: [
+      {
+        name: "Caesar's",
+        description: "Σαλάτα με iceberg, ντοματίνια, κρουτόν, μπέικον, κοτόπουλο, καλαμπόκι, παρμεζάνα",
+        price: "7,40€"
+      },
+      {
+        name: "Healthy",
+        description: "Σαλάτα με ανάμεικτα baby λαχανικά, φιλέτο πράσινου μήλου, πούδρα παρμεζάνας, μαύρο σουσάμι, ντοματίνια, ξηροί καρποί & dressing βαλσάμικο",
+        price: "6,20€"
+      }
+    ]
+  },
+  {
+    category: "Τυλιχτά Πίτες",
+    icon: "pizza",
+    items: [
+      {
+        name: "Γύρος Χοιρινός",
+        description: "Πίτα, γύρος χοιρινός, ντομάτα, κρεμμύδι, πατάτες, σως",
+        price: "4,70€",
+        featured: true
+      },
+      {
+        name: "Γύρος Κοτόπουλο",
+        description: "Πίτα, γύρος κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως",
+        price: "4,70€"
+      }
+    ]
+  },
+  {
+    category: "Μερίδες",
+    icon: "utensils",
+    items: [
+      {
+        name: "Γύρος Χοιρινός",
+        description: "Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
+        price: "8,60€",
+        featured: true
+      },
+      {
+        name: "Γύρος Κοτόπουλο",
+        description: "Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & σως μουστάρδας",
+        price: "8,60€"
+      }
+    ]
+  },
+  {
+    category: "Burgers",
+    icon: "pizza",
+    items: [
+      {
+        name: "Pumba Double Burger",
+        description: "Ψωμάκι brioche με 2 μπιφτέκια μοσχαρίσια, διπλό cheddar & μπέικον",
+        price: "7,60€",
+        featured: true
+      },
+      {
+        name: "Chaos Burger",
+        description: "Ψωμάκι brioche με μπιφτέκι Black Angus 150gr, μπέικον & σως Jack Daniel's",
+        price: "8,30€",
+        featured: true
+      }
+    ]
+  }
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Lucide icons
-  lucide.createIcons();
-  
-  // Set current year in footer
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-  
-  // Navbar scroll effect
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-  
-  // Mobile menu functionality
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const closeMenuBtn = document.getElementById('close-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-  
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-  });
-  
-  closeMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-  });
-  
-  mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-    });
-  });
-  
-  // E-food ordering buttons
-  const orderButtons = document.querySelectorAll('.order-btn, .hero-order-btn, .order-menu-btn, .order-online-btn, .footer-order-btn');
-  orderButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
-    });
-  });
-  
-  // Scroll to Top button
-  const scrollToTopBtn = document.getElementById('scroll-to-top');
-  
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      scrollToTopBtn.classList.add('visible');
-    } else {
-      scrollToTopBtn.classList.remove('visible');
-    }
-  });
-  
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-  
-  // Reveal animations on scroll
-  function revealElements() {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(element => {
-      const windowHeight = window.innerHeight;
-      const elementTop = element.getBoundingClientRect().top;
-      const elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        element.classList.add('active');
-      }
-    });
+// Testimonials data
+const testimonials = [
+  {
+    id: 1,
+    name: "Stella Zoumpoulidi",
+    text: "Μακράν ότι καλύτερο...τεράστια μερίδα...πολύ γευστικό...και έφερα και σπίτι! Αξίζει τα λεφτά του!!!",
+    rating: 5,
+    date: "33 ημέρες πριν"
+  },
+  {
+    id: 2,
+    name: "Νίκος Παγκωνιάτης",
+    text: "Μεγάλες μερίδες, πολύ νόστιμες. Καθαρός χώρος. Εξαιρετική εξυπηρέτηση.",
+    rating: 5,
+    date: "1 χρόνο πριν"
+  },
+  {
+    id: 3,
+    name: "Κυπριανός Σταύρου",
+    text: "Γεμάτο πιτόγυρο με κρέας πολύ καλό ψήσιμο. Οι πατάτες είναι κάπως μικρές, αλλά είναι πολύ μεγάλη η μερίδα, οπότε δεν μειώνεται σε τίποτα.",
+    rating: 5,
+    date: "1 μήνα πριν"
+  },
+  {
+    id: 4,
+    name: "Γιάννης Εξάρχου",
+    text: "Το καλύτερο γύρο που έχω φάει σε ολόκληρη την Ελλάδα! Απίστευτες πατάτες, λαχταριστά όλα, στα 5 το κρέας είναι σε μεγάλη ποσότητα και λαχταριστό! Συστήνεται ανεπιφύλακτα!",
+    rating: 5,
+    date: "8 μήνες πριν"
+  },
+  {
+    id: 5,
+    name: "Μίλτος Ρόζιας",
+    text: "Πολύ καλό κοτόπουλο, μεγάλες μερίδες, και σε πολύ καλή τιμή.",
+    rating: 5,
+    date: "3 μήνες πριν"
+  },
+  {
+    id: 6,
+    name: "Γιώργος Γκιουλές",
+    text: "Εξαιρετικό φαγητό, μεγάλες μερίδες, ευγενικό προσωπικό, πολύ ωραία ατμόσφαιρα!! Μια χαρά όλα!",
+    rating: 5,
+    date: "1 χρόνο πριν"
+  },
+  {
+    id: 7,
+    name: "Christos Galanis",
+    text: "ΤΕΛΕΙΟ...πολύ γευστικά όλα...υπέροχη γεύση...μεγάλες μερίδες. ΤΟ ΣΥΝΙΣΤΏ ΑΝΕΠΙΦΎΛΑΚΤΑ.",
+    rating: 5,
+    date: "10 μήνες πριν"
+  },
+  {
+    id: 8,
+    name: "Έλενα Ιωαννίδου",
+    text: "Πολύ νόστιμο φαγητό, μεγάλες μερίδες και πολύ γρήγορη εξυπηρέτηση.",
+    rating: 5,
+    date: "11 μήνες πριν"
+  },
+  {
+    id: 9,
+    name: "Αναστάσιος Αναγνωστίδης",
+    text: "Ότι καλύτερο έχω φάει στην περιοχή! Το κοτόπουλο ήταν τέλειο, η σος απίστευτη και μπόλικες πατάτες! Ανυπομονώ να ξανάρθω!",
+    rating: 5,
+    date: "3 μήνες πριν"
   }
-  
-  window.addEventListener('scroll', revealElements);
-  revealElements(); // Initial check on load
-  
-  // Generate menu sections
-  function generateMenu() {
-    const menuContainer = document.querySelector('.menu-container');
-    if (!menuContainer) return;
-
-    // Create column layout for menu categories
-    const columnCount = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-    const columns = [];
-    
-    for (let i = 0; i < columnCount; i++) {
-      const column = document.createElement('div');
-      column.className = 'menu-column';
-      columns.push(column);
-      menuContainer.appendChild(column);
-    }
-    
-    // Distribute categories across columns
-    menuItems.forEach((category, index) => {
-      const columnIndex = index % columnCount;
-      const categoryEl = createCategoryElement(category);
-      columns[columnIndex].appendChild(categoryEl);
-    });
-  }
-  
-  function createCategoryElement(category) {
-    const categoryEl = document.createElement('div');
-    categoryEl.className = 'menu-category reveal';
-    
-    const categoryHeader = document.createElement('div');
-    categoryHeader.className = 'category-header';
-    
-    const iconEl = document.createElement('i');
-    iconEl.setAttribute('data-lucide', category.icon);
-    iconEl.className = 'icon-medium';
-    
-    const titleEl = document.createElement('h3');
-    titleEl.className = 'category-title';
-    titleEl.textContent = category.category;
-    
-    categoryHeader.appendChild(iconEl);
-    categoryHeader.appendChild(titleEl);
-    categoryEl.appendChild(categoryHeader);
-    
-    const itemsContainer = document.createElement('div');
-    itemsContainer.className = 'menu-items';
-    
-    category.items.forEach(item => {
-      const itemEl = document.createElement('div');
-      itemEl.className = `menu-item ${item.featured ? 'featured' : ''}`;
-      
-      const itemHeader = document.createElement('div');
-      itemHeader.className = 'item-header';
-      
-      const nameEl = document.createElement('h4');
-      nameEl.className = 'item-name';
-      nameEl.textContent = item.name;
-      
-      const priceEl = document.createElement('span');
-      priceEl.className = 'item-price';
-      priceEl.textContent = item.price;
-      
-      itemHeader.appendChild(nameEl);
-      itemHeader.appendChild(priceEl);
-      itemEl.appendChild(itemHeader);
-      
-      if (item.description) {
-        const descEl = document.createElement('p');
-        descEl.className = 'item-description';
-        descEl.textContent = item.description;
-        itemEl.appendChild(descEl);
-      }
-      
-      if (item.featured) {
-        const tagEl = document.createElement('span');
-        tagEl.className = 'featured-tag';
-        tagEl.textContent = 'ΠΡΟΤΕΙΝΟΜΕΝΟ';
-        itemEl.appendChild(tagEl);
-      }
-      
-      itemsContainer.appendChild(itemEl);
-    });
-    
-    categoryEl.appendChild(itemsContainer);
-    return categoryEl;
-  }
-  
-  // Generate testimonials
-  function generateTestimonials() {
-    // Desktop testimonials
-    const desktopTestimonials = document.querySelector('.desktop-testimonials');
-    if (desktopTestimonials) {
-      testimonials.slice(0, 6).forEach(testimonial => {
-        desktopTestimonials.appendChild(createTestimonialCard(testimonial));
-      });
-    }
-    
-    // Mobile testimonials carousel
-    const carouselTrack = document.querySelector('.carousel-track');
-    if (carouselTrack) {
-      testimonials.forEach(testimonial => {
-        const slide = document.createElement('div');
-        slide.className = 'carousel-slide';
-        slide.appendChild(createTestimonialCard(testimonial));
-        carouselTrack.appendChild(slide);
-      });
-      
-      // Initialize carousel
-      initCarousel();
-    }
-  }
-  
-  function createTestimonialCard(testimonial) {
-    const card = document.createElement('div');
-    card.className = 'testimonial-card';
-    
-    const starsContainer = document.createElement('div');
-    starsContainer.className = 'testimonial-stars';
-    
-    for (let i = 0; i < 5; i++) {
-      const star = document.createElement('i');
-      star.setAttribute('data-lucide', 'star');
-      star.className = i < testimonial.rating ? 'star-icon filled' : 'star-icon';
-      starsContainer.appendChild(star);
-    }
-    
-    const text = document.createElement('p');
-    text.className = 'testimonial-text';
-    text.textContent = `"${testimonial.text}"`;
-    
-    const footer = document.createElement('div');
-    footer.className = 'testimonial-footer';
-    
-    const name = document.createElement('p');
-    name.className = 'testimonial-name';
-    name.textContent = testimonial.name;
-    
-    const date = document.createElement('p');
-    date.className = 'testimonial-date';
-    date.textContent = testimonial.date;
-    
-    footer.appendChild(name);
-    footer.appendChild(date);
-    
-    card.appendChild(starsContainer);
-    card.appendChild(text);
-    card.appendChild(footer);
-    
-    return card;
-  }
-  
-  // Testimonials carousel functionality
-  function initCarousel() {
-    const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    let currentIndex = 0;
-    
-    if (!track || !slides.length || !prevBtn || !nextBtn) return;
-    
-    // Set initial width
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.width = `${slideWidth * slides.length}px`;
-    
-    // Update slide positions
-    function updateSlidePosition() {
-      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-    
-    // Next slide
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlidePosition();
-    });
-    
-    // Previous slide
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlidePosition();
-    });
-    
-    // Handle resize
-    window.addEventListener('resize', () => {
-      const newSlideWidth = slides[0].getBoundingClientRect().width;
-      track.style.width = `${newSlideWidth * slides.length}px`;
-      updateSlidePosition();
-    });
-  }
-  
-  // Initialize menu and testimonials
-  generateMenu();
-  generateTestimonials();
-  
-  // Reinitialize Lucide icons after dynamic content generation
-  lucide.createIcons();
-  
-  // Handle window resize
-  window.addEventListener('resize', debounce(() => {
-    const menuContainer = document.querySelector('.menu-container');
-    if (menuContainer) {
-      // Clear and regenerate menu on significant width changes
-      const oldColumnCount = menuContainer.childElementCount;
-      const newColumnCount = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-      
-      if (oldColumnCount !== newColumnCount) {
-        menuContainer.innerHTML = '';
-        generateMenu();
-        lucide.createIcons();
-      }
-    }
-  }, 250));
-});
-
-// Debounce utility function
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
+];

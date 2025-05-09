@@ -1,429 +1,372 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pumba Gyros - The Art of Gyros</title>
-    <meta name="description" content="Authentic Greek gyros in Thessaloniki. Fresh ingredients, traditional recipes, unforgettable flavors." />
-    <meta name="author" content="Pumba Gyros" />
-
-    <meta property="og:title" content="Pumba Gyros - The Art of Gyros" />
-    <meta property="og:description" content="Authentic Greek gyros in Thessaloniki. Fresh ingredients, traditional recipes, unforgettable flavors." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap">
-    
-    <!-- Lucide Icons (CDN) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Custom CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumba Gyros - Best Gyros in Sindos Thessaloniki</title>
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav id="navbar" class="navbar">
-      <div class="container">
-        <a href="#" class="nav-logo">
-          <span class="text-pumba-red">P</span>umba
-        </a>
-        
-        <div class="nav-links desktop-nav">
-          <a href="#menu" class="nav-link">Μενού</a>
-          <a href="#about" class="nav-link">Σχετικά</a>
-          <a href="#location" class="nav-link">Τοποθεσία</a>
-        </div>
-        
-        <div class="nav-actions desktop-nav">
-          <a href="tel:2310799500" class="phone-link">
-            <i data-lucide="phone" class="icon-small"></i>
-            <span>231 079 9500</span>
-          </a>
-          <button class="btn-primary order-btn">
-            <i data-lucide="shopping-bag" class="icon-small"></i>
-            Παραγγελία
-          </button>
-        </div>
-        
-        <button id="mobile-menu-btn" class="mobile-menu-btn">
-          <i data-lucide="menu" class="icon-menu"></i>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-      <button id="close-menu-btn" class="close-menu-btn">
-        <i data-lucide="x" class="icon-close"></i>
-      </button>
-      
-      <div class="mobile-menu-items">
-        <a href="#menu" class="mobile-menu-link">Μενού</a>
-        <a href="#about" class="mobile-menu-link">Σχετικά</a>
-        <a href="#location" class="mobile-menu-link">Τοποθεσία</a>
-        
-        <a href="tel:2310799500" class="mobile-menu-phone">
-          <i data-lucide="phone" class="icon-small"></i>
-          <span>231 079 9500</span>
-        </a>
-        
-        <button class="btn-primary mobile-order-btn">
-          <i data-lucide="shopping-bag" class="icon-small"></i>
-          Παραγγελία
-        </button>
-      </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="video-background">
-        <div class="overlay"></div>
-        <div class="gradient-overlay"></div>
-        <video autoplay loop muted playsinline>
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-cooking-meat-on-a-barbecue-grill-close-up-of-kebab-and-43388-large.mp4" type="video/mp4">
-        </video>
-      </div>
-      
-      <div class="hero-content container">
-        <div class="logo-container">
-          <img src="images/pumba-logo.png" alt="Pumba Logo" class="pumba-logo animate-float">
-        </div>
-        
-        <h1 class="hero-title reveal">
-          <span class="text-pumba-red">PUMBA</span> GYROS
-        </h1>
-        <p class="hero-subtitle reveal">Ανακαλύψτε την τέχνη του γύρου στην καρδιά της Σίνδου Θεσσαλονίκης</p>
-        
-        <div class="hero-buttons reveal">
-          <button class="btn-primary hero-order-btn">
-            <i data-lucide="shopping-bag" class="icon-small"></i>
-            Παραγγελία Online
-          </button>
-          <a href="tel:2310799500" class="btn-secondary hero-call-btn">
-            <i data-lucide="phone" class="icon-small"></i>
-            Καλέστε Τώρα
-          </a>
-        </div>
-      </div>
-      
-      <div class="scroll-indicator">
-        <a href="#menu" aria-label="Scroll to menu section">
-          <i data-lucide="arrow-down" class="arrow-down"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="section menu-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Μενού</h2>
-          <p class="section-description">Απολαύστε την αυθεντική ελληνική γεύση με τα φρέσκα υλικά και τις παραδοσιακές συνταγές μας</p>
-        </div>
-        
-        <div class="menu-container">
-          <!-- Menu grid will be generated by JavaScript -->
-        </div>
-        
-        <div class="section-cta">
-          <button class="btn-primary large-btn order-menu-btn">
-            <i data-lucide="shopping-bag" class="icon-small"></i>
-            Παραγγείλετε Online
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-      <div class="container">
-        <h2 class="section-title reveal">
-          <span class="text-pumba-red">Σ</span>χετικά με εμάς
-        </h2>
-        
-        <div class="about-content reveal">
-          <div class="about-story">
-            <h3 class="about-subtitle">Η ιστορία του <span class="text-pumba-red">PUMBA</span></h3>
-            <p class="about-text">Από το 2023, το Pumba έφερε μια φρέσκια προσέγγιση στον παραδοσιακό ελληνικό γύρο στην καρδιά της Σίνδου Θεσσαλονίκης. Με πάθος για την ποιότητα και την αυθεντικότητα, δημιουργήσαμε ένα μέρος όπου η παράδοση συναντά την καινοτομία.</p>
-            <p class="about-text">Κάθε πιάτο μας παρασκευάζεται με αγάπη, χρησιμοποιώντας τα πιο φρέσκα υλικά και παραδοσιακές συνταγές, προσφέροντας μια αξέχαστη γευστική εμπειρία σε κάθε επισκέπτη.</p>
-          </div>
-              
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="users" class="icon-medium"></i>
-              </div>
-              <div class="feature-content">
-                <h4 class="feature-title">Έμπειρο Προσωπικό</h4>
-                <p class="feature-text">Η ομάδα μας αποτελείται από επαγγελματίες με πάθος για την ελληνική κουζίνα</p>
-              </div>
-            </div>
-            
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="award" class="icon-medium"></i>
-              </div>
-              <div class="feature-content">
-                <h4 class="feature-title">Άριστη Ποιότητα</h4>
-                <p class="feature-text">Επιλέγουμε μόνο τα καλύτερα υλικά για τα πιάτα μας, εξασφαλίζοντας κορυφαία γεύση</p>
-              </div>
-            </div>
-            
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i data-lucide="clock" class="icon-medium"></i>
-              </div>
-              <div class="feature-content">
-                <h4 class="feature-title">Γρήγορη Εξυπηρέτηση</h4>
-                <p class="feature-text">Το φαγητό σας, γρήγορα και φρεσκομαγειρεμένο, χωρίς συμβιβασμούς στην ποιότητα</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta-section">
-      <div class="cta-background">
-        <div class="overlay"></div>
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Delicious burger" class="cta-img">
-      </div>
-      
-      <div class="container relative">
-        <div class="cta-content">
-          <h2 class="cta-title reveal">
-            Πεινάσατε; Είμαστε μόνο ένα τηλεφώνημα μακριά!
-          </h2>
-          
-          <div class="cta-buttons reveal">
-            <a href="tel:2310799500" class="btn-primary">
-              <i data-lucide="phone" class="icon-small"></i>
-              231 079 9500
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-white">
+                <span class="text-red">P</span>umba
             </a>
             
-            <button class="btn-secondary order-online-btn">
-              <i data-lucide="shopping-bag" class="icon-small"></i>
-              Παραγγείλτε Online
-              <i data-lucide="external-link" class="icon-small"></i>
+            <div class="hidden md:flex space-x-8">
+                <a href="#menu" class="text-white hover-red">Μενού</a>
+                <a href="#about" class="text-white hover-red">Σχετικά</a>
+                <a href="#testimonials" class="text-white hover-red">Κριτικές</a>
+                <a href="#location" class="text-white hover-red">Τοποθεσία</a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:2310799500" class="flex items-center text-white hover-red">
+                    <i class="fas fa-phone mr-1"></i>
+                    <span>231 079 9500</span>
+                </a>
+                <a href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246" target="_blank" class="btn-primary flex items-center">
+                    <i class="fas fa-shopping-bag mr-2"></i>
+                    Παραγγελία
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
             </button>
-          </div>
         </div>
-      </div>
-    </section>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-black/95 fixed inset-0 z-50 flex-col items-center justify-center space-y-8 hidden">
+            <button id="close-menu" class="absolute top-4 right-4 text-white">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <a href="#menu" class="text-2xl text-white hover-red mobile-link">Μενού</a>
+            <a href="#about" class="text-2xl text-white hover-red mobile-link">Σχετικά</a>
+            <a href="#testimonials" class="text-2xl text-white hover-red mobile-link">Κριτικές</a>
+            <a href="#location" class="text-2xl text-white hover-red mobile-link">Τοποθεσία</a>
+            
+            <a href="tel:2310799500" class="flex items-center text-white hover-red">
+                <i class="fas fa-phone mr-2"></i>
+                <span>231 079 9500</span>
+            </a>
+            
+            <a href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246" target="_blank" class="btn-primary flex items-center mt-4">
+                <i class="fas fa-shopping-bag mr-2"></i>
+                Παραγγελία
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black z-10"></div>
+            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-cooking-meat-on-a-barbecue-grill-close-up-of-kebab-and-43388-large.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="container mx-auto px-4 z-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex justify-center mb-4">
+                    <div class="relative">
+                        <img src="images/pumba-logo.png" alt="Pumba Logo" class="w-64 md:w-80 animate-float">
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white reveal">
+                    <span class="text-red">PUMBA</span> GYROS
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 reveal">Ανακαλύψτε την τέχνη του γύρου στην καρδιά της Σίνδου Θεσσαλονίκης</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 reveal">
+                    <a href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246" target="_blank" class="btn-primary flex items-center justify-center gap-2">
+                        <i class="fas fa-shopping-bag"></i>
+                        Παραγγελία Online
+                    </a>
+                    <a href="tel:2310799500" class="btn-secondary flex items-center justify-center gap-2">
+                        <i class="fas fa-phone"></i>
+                        Καλέστε Τώρα
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#menu" class="text-white">
+                <i class="fas fa-arrow-down fa-2x"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="section bg-black">
+        <div class="container mx-auto">
+            <h2 class="section-title text-center reveal">
+                <span class="text-red">Μ</span>ενού
+            </h2>
+            
+            <div class="menu-tabs flex justify-center mb-8 reveal">
+                <div class="categories-container overflow-x-auto pb-4">
+                    <div class="categories-wrapper flex space-x-2 md:space-x-4 min-w-max">
+                        <!-- Categories will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="menu-items" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 reveal">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="section-title text-center reveal">
+                    <span class="text-red">Σ</span>χετικά με εμάς
+                </h2>
+                
+                <div class="reveal">
+                    <div class="text-center max-w-3xl mx-auto mb-10">
+                        <h3 class="text-3xl font-bold mb-4">Η ιστορία του <span class="text-red">PUMBA</span></h3>
+                        <p class="text-gray-300 mb-6">Από το 2023, το Pumba έφερε μια φρέσκια προσέγγιση στον παραδοσιακό ελληνικό γύρο στην καρδιά της Σίνδου Θεσσαλονίκης. Με πάθος για την ποιότητα και την αυθεντικότητα, δημιουργήσαμε ένα μέρος όπου η παράδοση συναντά την καινοτομία.</p>
+                        <p class="text-gray-300 mb-8">
+                            Κάθε πιάτο μας παρασκευάζεται με αγάπη, χρησιμοποιώντας τα πιο φρέσκα υλικά και παραδοσιακές συνταγές, προσφέροντας μια αξέχαστη γευστική εμπειρία σε κάθε επισκέπτη.
+                        </p>
+                    </div>
+                        
+                    <div class="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                        <div class="flex flex-col items-center text-center p-6 bg-gray-900/50 rounded-lg hover:bg-gray-800/50 transition-all">
+                            <div class="mb-3 text-red">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Έμπειρο Προσωπικό</h4>
+                                <p class="text-gray-400">Η ομάδα μας αποτελείται από επαγγελματίες με πάθος για την ελληνική κουζίνα</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center p-6 bg-gray-900/50 rounded-lg hover:bg-gray-800/50 transition-all">
+                            <div class="mb-3 text-red">
+                                <i class="fas fa-award fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Άριστη Ποιότητα</h4>
+                                <p class="text-gray-400">Επιλέγουμε μόνο τα καλύτερα υλικά για τα πιάτα μας, εξασφαλίζοντας κορυφαία γεύση</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col items-center text-center p-6 bg-gray-900/50 rounded-lg hover:bg-gray-800/50 transition-all">
+                            <div class="mb-3 text-red">
+                                <i class="fas fa-clock fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Γρήγορη Εξυπηρέτηση</h4>
+                                <p class="text-gray-400">Το φαγητό σας, γρήγορα και φρεσκομαγειρεμένο, χωρίς συμβιβασμούς στην ποιότητα</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="py-12 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <img 
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80" 
+                alt="Delicious burger" 
+                class="w-full h-full object-cover"
+            />
+        </div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 reveal">
+                    Πεινάσατε; Είμαστε μόνο ένα τηλεφώνημα μακριά!
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+                    <a 
+                        href="tel:2310799500" 
+                        class="btn-primary flex items-center justify-center"
+                    >
+                        <i class="fas fa-phone mr-2"></i>
+                        231 079 9500
+                    </a>
+                    
+                    <a 
+                        href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246"
+                        target="_blank" 
+                        class="btn-secondary flex items-center justify-center gap-2"
+                    >
+                        <i class="fas fa-shopping-bag"></i>
+                        Παραγγείλτε Online
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials-section">
-      <div class="container">
-        <h2 class="section-title reveal">
-          <span class="text-pumba-red">Κ</span>ριτικές Πελατών
-        </h2>
-        <p class="section-description reveal">
-          Δείτε τι λένε οι πελάτες μας για την εμπειρία τους στο Pumba
-        </p>
-        
-        <div class="testimonials-grid desktop-testimonials reveal">
-          <!-- Desktop testimonials will be generated by JavaScript -->
-        </div>
-
-        <!-- Mobile carousel for testimonials -->
-        <div class="testimonials-carousel mobile-testimonials reveal">
-          <div class="carousel-container">
-            <div class="carousel-track">
-              <!-- Mobile testimonials will be generated by JavaScript -->
+    <div id="testimonials" class="section bg-black">
+        <div class="container mx-auto">
+            <h2 class="section-title text-center reveal">
+                <span class="text-red">Κ</span>ριτικές
+            </h2>
+            
+            <div class="testimonials-slider max-w-6xl mx-auto reveal">
+                <div class="swiper-container overflow-hidden">
+                    <div class="testimonials-wrapper flex transition-transform duration-300">
+                        <!-- Testimonials will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-4 mt-8">
+                    <button id="prev-testimonial" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="next-testimonial" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev-btn">
-              <i data-lucide="arrow-left" class="icon-small"></i>
-            </button>
-            <button class="carousel-btn next-btn">
-              <i data-lucide="arrow-right" class="icon-small"></i>
-            </button>
-          </div>
         </div>
-        
-        <div class="rating-badge reveal">
-          <div class="rating-stars">
-            <i data-lucide="star" class="star-icon filled"></i>
-            <i data-lucide="star" class="star-icon filled"></i>
-            <i data-lucide="star" class="star-icon filled"></i>
-            <i data-lucide="star" class="star-icon filled"></i>
-            <i data-lucide="star" class="star-icon filled"></i>
-          </div>
-          <p class="rating-text">
-            <span class="rating-score">4.8/5</span> από <span class="rating-count">150+</span> κριτικές
-          </p>
-        </div>
-        
-        <div class="testimonials-link reveal">
-          <a href="https://www.e-food.gr/delivery/thessaloniki/pumba-7484246" target="_blank" rel="noopener noreferrer" class="efood-link">
-            Δείτε περισσότερες κριτικές στο e-food
-            <i data-lucide="arrow-right" class="icon-small"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <!-- Location Section -->
-    <section id="location" class="section location-section">
-      <div class="container">
-        <h2 class="section-title reveal">
-          <span class="text-pumba-red">Τ</span>οποθεσία
-        </h2>
-        <p class="section-description reveal">
-          Επισκεφθείτε μας στο κατάστημά μας ή παραγγείλτε online
-        </p>
-        
-        <div class="location-content">
-          <div class="map-container reveal">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.7622419054073!2d22.803346876019193!3d40.67032987137419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a82500788b86bf%3A0x9f8fda01c49c284b!2sPUMBA!5e0!3m2!1sen!2sgr!4v1716826847159!5m2!1sen!2sgr" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          
-          <div class="contact-info reveal">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i data-lucide="map-pin" class="icon-medium"></i>
-              </div>
-              <div class="contact-text">
-                <h3 class="contact-title">Διεύθυνση</h3>
-                <p class="contact-detail">Μεγ. Αλεξάνδρου 55, Σίνδος, Θεσσαλονίκη 57400</p>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i data-lucide="clock" class="icon-medium"></i>
-              </div>
-              <div class="contact-text">
-                <h3 class="contact-title">Ώρες Λειτουργίας</h3>
-                <p class="contact-detail">Δευτέρα-Κυριακή: 12:00 - 00:00</p>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i data-lucide="phone" class="icon-medium"></i>
-              </div>
-              <div class="contact-text">
-                <h3 class="contact-title">Τηλέφωνο</h3>
-                <p class="contact-detail">
-                  <a href="tel:2310799500" class="contact-link">231 079 9500</a>
+    <div id="location" class="section bg-black">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="section-title text-center reveal">
+                    <span class="text-red">Τ</span>οποθεσία
+                </h2>
+                <p class="text-center text-lg mb-12 max-w-2xl mx-auto reveal">
+                    Επισκεφθείτε μας στο κατάστημά μας ή παραγγείλτε online
                 </p>
-              </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="reveal">
+                        <div class="rounded-lg overflow-hidden shadow-xl h-[400px]">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.7622419054073!2d22.803346876019193!3d40.67032987137419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a82500788b86bf%3A0x9f8fda01c49c284b!2sPUMBA!5e0!3m2!1sen!2sgr!4v1716826847159!5m2!1sen!2sgr" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" title="Pumba Gyros Location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-red mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Διεύθυνση</h3>
+                                    <p class="text-gray-300">Σίνδος, 57400, Θεσσαλονίκη</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red mr-4 mt-1">
+                                    <i class="fas fa-clock fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Ώρες Λειτουργίας</h3>
+                                    <p class="text-gray-300">Δευτέρα - Κυριακή: 12:00 - 00:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red mr-4 mt-1">
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Τηλέφωνο</h3>
+                                    <p class="text-gray-300">
+                                        <a href="tel:2310799500" class="hover-red transition-colors">231 079 9500</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red mr-4 mt-1">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Email</h3>
+                                    <p class="text-gray-300">
+                                        <a href="mailto:info@pumbagyros.gr" class="hover-red transition-colors">info@pumbagyros.gr</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-red mr-4 mt-1">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Instagram</h3>
+                                    <p class="text-gray-300">
+                                        <a href="https://www.instagram.com/pumbagyros/" target="_blank" class="hover-red transition-colors">@pumbagyros</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i data-lucide="mail" class="icon-medium"></i>
-              </div>
-              <div class="contact-text">
-                <h3 class="contact-title">Email</h3>
-                <p class="contact-detail">
-                  <a href="mailto:pumbaike@gmail.com" class="contact-link">pumbaike@gmail.com</a>
-                </p>
-              </div>
-            </div>
-            
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i data-lucide="instagram" class="icon-medium"></i>
-              </div>
-              <div class="contact-text">
-                <h3 class="contact-title">Instagram</h3>
-                <p class="contact-detail">
-                  <a href="https://www.instagram.com/pumba_sindos/" target="_blank" rel="noopener noreferrer" class="contact-link">@pumba_sindos</a>
-                  <a href="https://www.instagram.com/pumba_lhth/" target="_blank" rel="noopener noreferrer" class="contact-link">@pumba_lhth</a>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <div class="footer-logo">
-              <img src="images/pumba-logo-small.png" alt="Pumba Logo" class="footer-logo-img">
-              <h3 class="footer-logo-text">PUMBA</h3>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold">
+                        <span class="text-red">P</span>umba Gyros
+                    </h2>
+                    <p class="text-gray-400 mt-2">Η τέχνη του γύρου στη Σίνδο</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/pumbagyros/" target="_blank" class="text-white hover-red">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://www.facebook.com/pumbagyros/" target="_blank" class="text-white hover-red">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="tel:2310799500" class="text-white hover-red">
+                        <i class="fas fa-phone fa-lg"></i>
+                    </a>
+                </div>
             </div>
-            <p class="footer-description">
-              Η τέχνη του γύρου σε κάθε μπουκιά. Απολαύστε αυθεντικές ελληνικές γεύσεις, φτιαγμένες με τα καλύτερα υλικά και πολλή αγάπη.
-            </p>
-            <div class="social-links">
-              <a href="https://www.instagram.com/pumba_sindos/" target="_blank" rel="noopener noreferrer" class="social-link">
-                <i data-lucide="instagram" class="social-icon"></i>
-              </a>
-              <a href="https://www.instagram.com/pumba_lhth/" target="_blank" rel="noopener noreferrer" class="social-link">
-                <i data-lucide="instagram" class="social-icon"></i>
-              </a>
-            </div>
-          </div>
-          
-          <div class="footer-contact">
-            <h3 class="footer-heading">Επικοινωνία</h3>
-            <ul class="footer-contact-list">
-              <li class="footer-contact-item">
-                <i data-lucide="map-pin" class="icon-small"></i>
-                <span>Μεγ. Αλεξάνδρου 55, Σίνδος, Θεσσαλονίκη 57400</span>
-              </li>
-              <li class="footer-contact-item">
-                <i data-lucide="phone" class="icon-small"></i>
-                <a href="tel:2310799500" class="footer-link">231 079 9500</a>
-              </li>
-              <li class="footer-contact-item">
-                <i data-lucide="mail" class="icon-small"></i>
-                <a href="mailto:pumbaike@gmail.com" class="footer-link">pumbaike@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="footer-hours">
-            <h3 class="footer-heading">Ώρες Λειτουργίας</h3>
-            <ul class="hours-list">
-              <li class="hours-item">
-                <span>Δευτέρα - Κυριακή:</span>
-                <span>12:00 - 00:00</span>
-              </li>
-            </ul>
             
-            <div class="footer-order">
-              <button class="btn-primary footer-order-btn">
-                <i data-lucide="shopping-bag" class="icon-small"></i>
-                Παραγγείλτε Τώρα
-              </button>
+            <div class="border-t border-gray-800 my-6"></div>
+            
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Pumba Gyros. Με επιφύλαξη παντός νομίμου δικαιώματος.</p>
             </div>
-          </div>
         </div>
-        
-        <div class="footer-bottom">
-          <p class="copyright">
-            © <span id="current-year"></span> Pumba Gyros. Με επιφύλαξη παντός δικαιώματος.
-          </p>
-          <div class="footer-links">
-            <a href="#" class="footer-legal">Όροι χρήσης</a>
-            <a href="#" class="footer-legal">Πολιτική απορρήτου</a>
-          </div>
-        </div>
-      </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="scroll-to-top">
-      <i data-lucide="arrow-up" class="icon-small"></i>
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-6 z-50 bg-red p-3 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-110 hidden">
+        <i class="fas fa-arrow-up text-white"></i>
     </button>
 
-    <!-- Scripts -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
 </html>
