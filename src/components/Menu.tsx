@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Burger, Salad, Beef, Sandwich, Beer } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -266,7 +267,7 @@ const menuItems = [
       },
       {
         name: "Φιλέτο κοτόπουλο στήθος σε σάντουιτς",
-        description: "Σάντουιτς φιλέτο κο��όπουλ�� στήθο�� με τα υλικά της επιλογής σας",
+        description: "Σάντουιτς φιλέτο κοτόπουλο στήθος με τα υλικά της επιλογής σας",
         price: "Από 4,00€"
       },
       {
@@ -338,7 +339,7 @@ const menuItems = [
   },
   {
     category: "Αθηναϊκή πίτα",
-    icon: <Burger className="text-pumba-red" size={24} />,
+    icon: <Pizza className="text-pumba-red" size={24} />,
     items: [
       {
         name: "Σουβλάκι χοιρινό σε Αθηναϊκή πίτα",
@@ -364,7 +365,7 @@ const menuItems = [
   },
   {
     category: "Τυλιχτά Πίτες",
-    icon: <Burger className="text-pumba-red" size={24} />,
+    icon: <Pizza className="text-pumba-red" size={24} />,
     items: [
       {
         name: "Γύρος Χοιρινός",
@@ -602,7 +603,7 @@ const menuItems = [
   },
   {
     category: "Burgers",
-    icon: <Burger className="text-pumba-red" size={24} />,
+    icon: <Pizza className="text-pumba-red" size={24} />,
     items: [
       {
         name: "Pumba Double Burger",
