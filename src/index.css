@@ -88,31 +88,6 @@
     @apply w-full bg-black/70 border border-white/20 rounded-md py-2 px-4 
            focus:outline-none focus:border-pumba-red transition-all duration-300;
   }
-  
-  /* Fix for Pumba Premium and Μπύρες/Ποτά sections on desktop */
-  @media (min-width: 1024px) {
-    .menu-category[data-category="pumba-premium"],
-    .menu-category[data-category="drinks"] {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    
-    .menu-category[data-category="pumba-premium"] .menu-item,
-    .menu-category[data-category="drinks"] .menu-item {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .menu-category[data-category="pumba-premium"] .menu-item-content,
-    .menu-category[data-category="drinks"] .menu-item-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  }
 }
 
 /* Custom scroll bar */
