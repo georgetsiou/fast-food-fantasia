@@ -872,7 +872,22 @@ const Menu = () => {
       
       // Distribute menu items evenly across columns based on total item count
       menuItems.forEach((category, idx) => {
-        columnsArray[idx % columnCount].push(category);
+        const categoryName = category.category;
+        
+        // Special handling for Pumba Premium and Μπύρες/Ποτά - put them in the last column if possible
+        if (categoryName === "Pumba Premium" || categoryName === "Μπύρες/Ποτά") {
+          // Try to place these categories at the end of columns to fill space better
+          const columnLengths = columnsArray.map(col => 
+            col.reduce((sum, cat) => sum + cat.items.length, 0)
+          );
+          
+          // Find the column with the least items
+          const minColumnIndex = columnLengths.indexOf(Math.min(...columnLengths));
+          columnsArray[minColumnIndex].push(category);
+        } else {
+          // Regular distribution for other categories
+          columnsArray[idx % columnCount].push(category);
+        }
       });
       
       return (

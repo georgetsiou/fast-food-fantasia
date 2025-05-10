@@ -88,6 +88,11 @@
     @apply w-full bg-black/70 border border-white/20 rounded-md py-2 px-4 
            focus:outline-none focus:border-pumba-red transition-all duration-300;
   }
+  
+  /* Special styling for premium items */
+  .menu-item.premium {
+    @apply bg-gradient-to-br from-black/80 to-pumba-red/10 border-l-2 border-pumba-gold;
+  }
 }
 
 /* Custom scroll bar */
@@ -126,4 +131,28 @@
 
 .hover-grow:hover {
   transform: scale(1.05);
+}
+
+/* Media queries to better handle specific menu sections */
+@media (min-width: 1024px) {
+  /* Make Pumba Premium and Μπύρες/Ποτά sections display better on desktop */
+  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Center content vertically for items with less content */
+  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item .p-3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Make featured items in these sections stand out more */
+  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item.border-l-4 {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(255,30,30,0.1) 100%);
+    box-shadow: 0 4px 15px rgba(255, 30, 30, 0.15);
+  }
 }
