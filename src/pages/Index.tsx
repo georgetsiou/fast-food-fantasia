@@ -28,7 +28,8 @@ const Index = () => {
     };
     
     window.addEventListener('scroll', revealElements);
-    revealElements(); // Initial check on load
+    // Initial check on load with a slight delay to ensure DOM is fully rendered
+    setTimeout(revealElements, 100);
     
     return () => window.removeEventListener('scroll', revealElements);
   }, []);
