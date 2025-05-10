@@ -77,7 +77,7 @@
   
   .menu-item {
     @apply border-t border-l border-white/10 rounded-lg p-2 hover:border-pumba-red 
-           transition-all duration-300 bg-black/50 backdrop-blur-sm h-full;
+           transition-all duration-300 bg-black/50 backdrop-blur-sm;
   }
   
   .menu-item:hover {
@@ -87,11 +87,6 @@
   .contact-input {
     @apply w-full bg-black/70 border border-white/20 rounded-md py-2 px-4 
            focus:outline-none focus:border-pumba-red transition-all duration-300;
-  }
-  
-  /* Special styling for premium items */
-  .menu-item.premium {
-    @apply bg-gradient-to-br from-black/80 to-pumba-red/10 border-l-2 border-pumba-gold;
   }
 }
 
@@ -131,65 +126,4 @@
 
 .hover-grow:hover {
   transform: scale(1.05);
-}
-
-/* Media queries to better handle specific menu sections */
-@media (min-width: 1024px) {
-  /* Menu category styling */
-  [id="menu"] .category-header {
-    @apply sticky top-0 z-10 bg-black/80 backdrop-blur-md py-2 mb-3 border-b border-pumba-red/30;
-  }
-  
-  /* Menu item grid layout */
-  [id="menu"] .menu-grid {
-    @apply grid gap-0;
-  }
-  
-  [id="menu"] .menu-column {
-    @apply space-y-0;
-  }
-  
-  /* Individual menu item styling */
-  [id="menu"] .menu-item {
-    @apply m-0 rounded-none border-l border-t border-white/10 h-full;
-  }
-  
-  [id="menu"] .menu-item-inner {
-    @apply h-full flex flex-col;
-  }
-  
-  [id="menu"] .menu-item-content {
-    @apply flex-1 flex flex-col justify-between;
-  }
-  
-  /* Make Pumba Premium and Μπύρες/Ποτά sections display better on desktop */
-  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item {
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Center content vertically for items with less content */
-  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item .p-3 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Make featured items in these sections stand out more */
-  [id="menu"] .grid-cols-3 > div:nth-child(3) .menu-item.border-l-4 {
-    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(255,30,30,0.1) 100%);
-    box-shadow: 0 4px 15px rgba(255, 30, 30, 0.15);
-  }
-  
-  /* Create a more seamless tiled look */
-  [id="menu"] .menu-category {
-    @apply mb-6 border border-white/10 rounded-lg overflow-hidden bg-black/30 backdrop-blur-sm;
-  }
-  
-  /* Special styling for the last item in each category */
-  [id="menu"] .menu-category .menu-item:last-child {
-    @apply border-b border-white/10;
-  }
 }

@@ -867,62 +867,38 @@ const Menu = () => {
   const getMenuLayout = () => {
     if (!isMobile) {
       // Desktop: 3 columns with grid layout for better space usage
-      const columnCount = 3;
+      const columnCount = 3; // Increase columns from 2 to 3
       const columnsArray = Array.from({ length: columnCount }, () => []);
       
-      // Calculate total items per category for better distribution
-      const categoryItemCounts = menuItems.map(category => ({
-        name: category.category,
-        itemCount: category.items.length,
-        category
-      }));
-      
-      // Sort categories by item count (descending)
-      categoryItemCounts.sort((a, b) => b.itemCount - a.itemCount);
-      
-      // Distribute categories to balance columns
-      let columnHeights = Array(columnCount).fill(0);
-      
-      categoryItemCounts.forEach(({ category, itemCount, name }) => {
-        // Special handling for Pumba Premium and Μπύρες/Ποτά - put them in the column with least items
-        if (name === "Pumba Premium" || name === "Μπύρες/Ποτά") {
-          const minHeightIndex = columnHeights.indexOf(Math.min(...columnHeights));
-          columnsArray[minHeightIndex].push(category);
-          columnHeights[minHeightIndex] += itemCount;
-        } else {
-          // Find the column with the least items and add the category to it
-          const minHeightIndex = columnHeights.indexOf(Math.min(...columnHeights));
-          columnsArray[minHeightIndex].push(category);
-          columnHeights[minHeightIndex] += itemCount;
-        }
+      // Distribute menu items evenly across columns based on total item count
+      menuItems.forEach((category, idx) => {
+        columnsArray[idx % columnCount].push(category);
       });
       
       return (
-        <div className="grid grid-cols-3 gap-1 menu-grid">
+        <div className="grid grid-cols-3 gap-4">
           {columnsArray.map((columnCategories, colIdx) => (
-            <div key={colIdx} className="menu-column">
+            <div key={colIdx} className="space-y-4">
               {columnCategories.map((category, catIdx) => (
-                <div key={catIdx} className="reveal menu-category mb-4">
-                  <div className="flex items-center gap-2 p-3 category-header bg-gray-900/70">
+                <div key={catIdx} className="reveal">
+                  <div className="flex items-center gap-2 mb-3 bg-gray-900/30 p-2 rounded-lg">
                     {category.icon}
                     <h3 className="text-xl font-bold text-pumba-red">{category.category}</h3>
                   </div>
-                  <div className="grid grid-cols-1 gap-0">
+                  <div className="space-y-2">
                     {category.items.map((item, itemIdx) => (
                       <div 
                         key={itemIdx} 
-                        className={`menu-item ${item.featured ? 'border-l-4 border-pumba-red shadow-[0_0_10px_rgba(255,30,30,0.2)]' : ''}`}
+                        className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border-l-4 border-pumba-red shadow-[0_0_10px_rgba(255,30,30,0.2)]' : 'border border-transparent'}`}
                       >
-                        <div className="p-3 menu-item-inner">
-                          <div className="menu-item-content">
-                            <div className="flex justify-between items-start mb-1">
-                              <h4 className="text-lg font-bold">{item.name}</h4>
-                              <span className="text-pumba-gold font-bold ml-2 whitespace-nowrap">{item.price}</span>
-                            </div>
-                            {item.description && (
-                              <p className="text-gray-300 text-sm">{item.description}</p>
-                            )}
+                        <div className="p-3">
+                          <div className="flex justify-between items-start mb-1">
+                            <h4 className="text-lg font-bold">{item.name}</h4>
+                            <span className="text-pumba-gold font-bold ml-2 whitespace-nowrap">{item.price}</span>
                           </div>
+                          {item.description && (
+                            <p className="text-gray-300 text-sm">{item.description}</p>
+                          )}
                           {item.featured && (
                             <div className="mt-2">
                               <span className="bg-pumba-red text-white px-2 py-1 rounded-full text-xs font-bold">
@@ -941,30 +917,29 @@ const Menu = () => {
         </div>
       );
     } else {
-      // Mobile layout with improved spacing
+      // Mobile: 2 columns layout
+      // Create left and right column arrays
       const leftColumn = menuItems.filter((_, idx) => idx % 2 === 0);
       const rightColumn = menuItems.filter((_, idx) => idx % 2 === 1);
       
       return (
-        <div className="grid grid-cols-2 gap-1">
-          <div className="space-y-1">
+        <div className="grid grid-cols-2 gap-2">
+          <div className="space-y-8">
             {leftColumn.map((category, idx) => (
-              <div key={idx} className="reveal menu-category">
-                <div className="flex items-center gap-2 p-2 category-header bg-gray-900/70">
+              <div key={idx} className="reveal">
+                <div className="flex items-center gap-2 mb-2">
                   {category.icon}
                   <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-1 gap-0">
+                <div className="space-y-4">
                   {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item ${item.featured ? 'border-l-2 border-pumba-red' : ''}`}>
-                      <div className="p-2 menu-item-inner">
-                        <div className="menu-item-content">
-                          <div className="flex flex-col mb-1">
-                            <h4 className="text-sm font-bold">{item.name}</h4>
-                            <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
-                          </div>
-                          <p className="text-gray-300 text-xs">{item.description}</p>
+                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                      <div className="p-2">
+                        <div className="flex flex-col mb-1">
+                          <h4 className="text-sm font-bold">{item.name}</h4>
+                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
                         </div>
+                        <p className="text-gray-300 text-xs">{item.description}</p>
                         {item.featured && <div className="mt-1">
                           <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
                             ΠΡΟΤΕΙΝΟΜΕΝΟ
@@ -977,24 +952,22 @@ const Menu = () => {
               </div>
             ))}
           </div>
-          <div className="space-y-1">
+          <div className="space-y-8">
             {rightColumn.map((category, idx) => (
-              <div key={idx} className="reveal menu-category">
-                <div className="flex items-center gap-2 p-2 category-header bg-gray-900/70">
+              <div key={idx} className="reveal">
+                <div className="flex items-center gap-2 mb-2">
                   {category.icon}
                   <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-1 gap-0">
+                <div className="space-y-4">
                   {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item ${item.featured ? 'border-l-2 border-pumba-red' : ''}`}>
-                      <div className="p-2 menu-item-inner">
-                        <div className="menu-item-content">
-                          <div className="flex flex-col mb-1">
-                            <h4 className="text-sm font-bold">{item.name}</h4>
-                            <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
-                          </div>
-                          <p className="text-gray-300 text-xs">{item.description}</p>
+                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                      <div className="p-2">
+                        <div className="flex flex-col mb-1">
+                          <h4 className="text-sm font-bold">{item.name}</h4>
+                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
                         </div>
+                        <p className="text-gray-300 text-xs">{item.description}</p>
                         {item.featured && <div className="mt-1">
                           <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
                             ΠΡΟΤΕΙΝΟΜΕΝΟ
