@@ -9,6 +9,7 @@ import Location from '@/components/Location';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import CookieConsent from '@/components/CookieConsent';
 
 const Index = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const Index = () => {
       <Location />
       <Footer />
       <ScrollToTop />
+      <CookieConsent />
     </div>
   );
 };
