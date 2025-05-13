@@ -1,10 +1,14 @@
+
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const handleOrderClick = () => {
     window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
   };
+  
   return <footer className="bg-black pt-12 pb-6 text-white">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto px-4">
@@ -49,7 +53,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold mb-4">Ώρες Λειτουργίας</h3>
               <ul className="space-y-2">
                 <li className="flex justify-between">
-                  <span>Δευτέρα - Κυριακή: </span>
+                  <span>Δευτέρα - Κυριακή: </span>
                   <span>12:00 - 00:00</span>
                 </li>
                 <li className="flex justify-between">
@@ -82,10 +86,10 @@ const Footer = () => {
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Όροι χρήσης</a>
+                  <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Όροι χρήσης</Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">Πολιτική απορρήτου</a>
+                  <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Πολιτική απορρήτου</Link>
                 </li>
               </ul>
             </div>
@@ -94,4 +98,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
