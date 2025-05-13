@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
@@ -18,7 +17,7 @@ const menuItems = [
       },
       {
         name: "Τζατζίκι",
-        description: "Εδώ δεν χωράνε συστάσεις. Τζατζίκι, το κλασικό, το αληθινό, το αγαπημένο. Ζήτα άδεια από το��ς παρευρισκόμενους και κατανάλωσε εντελώς ανεύθυνα!",
+        description: "Εδώ δεν χωράνε συστάσεις. Τζατζίκι, το κλασικό, το αληθινό, το αγαπημένο. Ζήτα άδεια από τους παρευρισκόμενους και κατανάλωσε εντελώς ανεύθυνα!",
         price: "Από 0,50€"
       },
       {
@@ -94,7 +93,7 @@ const menuItems = [
       },
       {
         name: "Πατάτες τηγανητές",
-        description: "Φρεσκ���κομμένες πατάτες τηγανητές",
+        description: "Φρεσκοκομμένες πατάτες τηγανητές",
         price: "3,50€"
       },
       {
@@ -205,7 +204,7 @@ const menuItems = [
         price: "Από 2,00€"
       },
       {
-        name: "Λουκάνικο ��αυαρίας",
+        name: "Λουκάνικο Βαυαρίας",
         description: "",
         price: "Από 1,90€"
       },
@@ -243,7 +242,7 @@ const menuItems = [
   },
   {
     category: "Σάντουιτς",
-    icon: <Sandwich className="text-pumba-red" size={24} />,
+    icon: <Utensils className="text-pumba-red" size={24} />, // Changed from Sandwich to Utensils to match Αλοιφές
     items: [
       {
         name: "Γύρος χοιρινός σε σάντουιτς",
@@ -272,7 +271,7 @@ const menuItems = [
       },
       {
         name: "Φιλέτο κοτόπουλο μπούτι σε σάντουιτς",
-        description: "Σάντουιτς φιλέτο κο��όπουλ�� μπούτ�� με τα υλικά της επιλογής σας",
+        description: "Σάντουιτς φιλέτο κοτόπουλο μπούτι με τα υλικά της επιλογής σας",
         price: "Από 4,00€"
       },
       {
@@ -301,7 +300,7 @@ const menuItems = [
         price: "Από 3,90€"
       },
       {
-        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτ��",
+        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτς",
         description: "Σάντουιτς σουτζουκάκι γεμιστό με Philadelphia με τα υλικά της επιλογής σας",
         price: "Από 4,20€"
       },
@@ -339,7 +338,7 @@ const menuItems = [
   },
   {
     category: "Αθηναϊκή πίτα",
-    icon: <Pizza className="text-pumba-red" size={24} />,
+    icon: <Utensils className="text-pumba-red" size={24} />, // Changed from Pizza to Utensils to match Αλοιφές
     items: [
       {
         name: "Σουβλάκι χοιρινό σε Αθηναϊκή πίτα",
@@ -352,7 +351,7 @@ const menuItems = [
         price: "Από 2,50€"
       },
       {
-        name: "Παν��έτα χοιρινή σε Αθηναϊκή πίτα",
+        name: "Πανσέτα χοιρινή σε Αθηναϊκή πίτα",
         description: "Αθηναϊκή πίτα 16cm πανσέτα χοιρινή με τα υλικά της επιλογής σας",
         price: "Από 2,50€"
       },
@@ -365,7 +364,7 @@ const menuItems = [
   },
   {
     category: "Τυλιχτά Πίτες",
-    icon: <Pizza className="text-pumba-red" size={24} />,
+    icon: <Utensils className="text-pumba-red" size={24} />, // Changed from Pizza to Utensils to match Αλοιφές
     items: [
       {
         name: "Γύρος Χοιρινός",
@@ -385,7 +384,7 @@ const menuItems = [
       },
       {
         name: "Καλαμάκι Κοτόπουλο",
-        description: "Πίτα, ��αλαμάκι κοτόπουλ��, ντομάτα, κρεμμύδι, πατάτες, σως",
+        description: "Πίτα, καλαμάκι κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως",
         price: "3,80€"
       }
     ]
@@ -461,7 +460,7 @@ const menuItems = [
         price: "8,10€"
       },
       {
-        name: "Μπιφ��έκι Μοσχαρίσιο",
+        name: "Μπιφτέκι Μοσχαρίσιο",
         description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
         price: "8,10€"
       },
@@ -603,7 +602,7 @@ const menuItems = [
   },
   {
     category: "Burgers",
-    icon: <Pizza className="text-pumba-red" size={24} />,
+    icon: <Utensils className="text-pumba-red" size={24} />, // Changed from Beef to Utensils to match Αλοιφές
     items: [
       {
         name: "Pumba Double Burger",
@@ -633,382 +632,4 @@ const menuItems = [
       },
       {
         name: "Nala's burger",
-        description: "Ψωμάκι brioche με mesclun, chutney ντομάτας, κεφαλοτύρι σαγανάκι, πίκλες αγγουριού & ντομάτα",
-        price: "4,90€"
-      },
-      {
-        name: "Vegetarian burger",
-        description: "Ψωμάκι brioche με μπιφτέκι λαχανικών, iceberg, ντομάτα, σως ταχίνι, ketchup & μουστάρδα",
-        price: "4,30€"
-      },
-      {
-        name: "Kid's burger",
-        description: "Ψωμάκι brioche με μπιφτέκι μοσχαρίσιο, ketchup & μουστάρδα",
-        price: "3,70€"
-      },
-      {
-        name: "Chaos Burger",
-        description: "Ψωμάκι brioche με μπιφτέκι Black Angus 150gr, μπέικον & σως Jack Daniel's",
-        price: "8,30€"
-      }
-    ]
-  },
-  {
-    category: "Το κιλό",
-    icon: <Beef className="text-pumba-red" size={24} />,
-    items: [
-      {
-        name: "Παϊδάκια αρνίσια",
-        description: "Η τελική τιμή του προϊόντος θα διαμορφωθεί κατά το ζύγισμα",
-        price: "Από 19,00€",
-        featured: true
-      },
-      {
-        name: "Ολόκληρο κοτόπουλο σχάρας άνευ οστού",
-        description: "Συνοδεύεται από πατάτες τηγανητές, κεφαλοτύρι & dressing λεμονιού",
-        price: "13,50€",
-        featured: true
-      }
-    ]
-  },
-  {
-    category: "Μπύρες/Ποτά",
-    icon: <Beer className="text-pumba-red" size={24} />,
-    items: [
-      {
-        name: "Amstel 330ml",
-        description: "",
-        price: "2,60€"
-      },
-      {
-        name: "Heineken 330ml",
-        description: "",
-        price: "2,60€"
-      },
-      {
-        name: "Άλφα 330ml",
-        description: "",
-        price: "2,60€"
-      },
-      {
-        name: "Fischer φιάλη 500ml",
-        description: "",
-        price: "3,60€"
-      },
-      {
-        name: "Άλφα φιάλη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Amstel φιάλη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Amstel free φιάλη 500ml",
-        description: "",
-        price: "3,00€"
-      },
-      {
-        name: "Amstel Radler φιάλη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Μάμος φιάλη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Mythos φιάλη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Kaiser φιάλη 500ml",
-        description: "",
-        price: "3,60€"
-      },
-      {
-        name: "Ούζο Πλωμαρίου 200ml",
-        description: "",
-        price: "6,00€"
-      },
-      {
-        name: "Ρετσίνα Μαλαματίνα 500ml",
-        description: "",
-        price: "3,80€"
-      },
-      {
-        name: "Ρετσίνα Γεωργιάδη 500ml",
-        description: "",
-        price: "3,30€"
-      },
-      {
-        name: "Ρετσίνα Κεχριμπάρι 500ml",
-        description: "",
-        price: "4,50€"
-      },
-      {
-        name: "Ρετσίνα Βασιλική 500ml",
-        description: "",
-        price: "4,00€"
-      }
-    ]
-  },
-  
-  {
-    category: "Αναψυκτικά",
-    icon: <Coffee className="text-pumba-red" size={24} />,
-    items: [
-      {
-        name: "Coca-Cola 330ml",
-        description: "Κλασική Coca-Cola",
-        price: "1,80€"
-      },
-      {
-        name: "Coca-Cola Zero 330ml",
-        description: "Η Coca-Cola Zero είναι η ιδανική επιλογή για όσους θέλουν την υπέροχη αυθεντική γεύση της Coca‑Cola, χωρίς ζάχαρη και θερμίδες",
-        price: "1,80€"
-      },
-      {
-        name: "Coca-Cola Stevia 330ml",
-        description: "Με τη Coca-Cola Stevia απολαμβάνετε τη μοναδική, δροσιστική γεύση της Coca-Cola χωρίς θερμίδες και ζάχαρη, με γλυκαντικό από το φυτό Στέβια",
-        price: "1,80€"
-      },
-      {
-        name: "Coca-Cola Zero Lemon 330ml",
-        description: "Με τη νέα Coca-Cola Zero Λεμόνι, μπορείτε να απολαμβάνετε την υπέροχη γεύση της Coca-Cola Zero, χωρίς ζάχαρη και θερμίδες και με μοναδική γεύση λεμόνι",
-        price: "1,80€"
-      },
-      {
-        name: "Fanta Κόκκινη 330ml",
-        description: "Η Πορτοκαλάδα Fanta είναι η αγαπημένη πορτοκαλάδα των εφήβων στην Ελλάδα. Περιέχει 20% χυμό πορτοκαλιού",
-        price: "1,80€"
-      },
-      {
-        name: "Fanta Λεμόνι 330ml",
-        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρ��ματα λεμονιού και αμέτρητες φυσαλίδες",
-        price: "1,80€"
-      },
-      {
-        name: "Sprite 330ml",
-        description: "Το πρώτο κουτάκι Sprite άνοιξε το 1961 και από τότε κρατάει δροσερή την κορυφή της κατηγορίας αναψυκτικών lemon-lime",
-        price: "1,80€"
-      },
-      {
-        name: "Schweppes Soda Water 330ml",
-        description: "Το πρώτο ανθρακούχο αναψυκτικό στον κόσμο, διατηρεί μέχρι και σήμερα την αυθεντική συνταγή του Jacob Schweppe από το 1783",
-        price: "1,80€"
-      },
-      {
-        name: "Coca-Cola 500ml",
-        description: "Κλασική Coca-Cola σε μεγαλύτερη συσκευασία",
-        price: "2,20€"
-      },
-      {
-        name: "Coca-Cola Zero 500ml",
-        description: "Coca-Cola Zero χωρίς ζάχαρη και θερμίδες σε μεγαλύτερη συσκευασία",
-        price: "2,20€"
-      },
-      {
-        name: "Fanta Κόκκινη 500ml",
-        description: "Η Πορτοκαλάδα Fanta με 20% χυμό πορτοκαλιού σε μεγαλύτερη συσκευασία",
-        price: "2,20€"
-      },
-      {
-        name: "Fanta Λεμόνι 500ml",
-        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού σε μεγαλύτερη συσκευασία",
-        price: "2,20€"
-      },
-      {
-        name: "Amita Πορτοκάλι, Μήλο & Καρότο 330ml",
-        description: "100% Φυσικός χυμός φρούτων χωρίς προσθήκη ζάχαρης με γεύση μήλο-πορτοκάλι-καρότο",
-        price: "1,50€"
-      },
-      {
-        name: "Amita Motion 330ml",
-        description: "Ο πρώτος πολυβιταμινούχος 100% φυσικός χυμός με 9 φρούτα και 7 βιταμίνες",
-        price: "1,80€"
-      },
-      {
-        name: "Lipton Ice Tea Λεμόνι 330ml",
-        description: "Με την ηλιόλουστη, αναζωογονητική του γεύση και το νόστιμο μείγμα από φύλλα τσαγιού και λεμόνι",
-        price: "1,80€"
-      },
-      {
-        name: "Lipton Ice Tea Ροδάκινο 330ml",
-        description: "Πιές μια γουλιά για να νιώσεις μια έκρηξ�� γεύσης ροδάκινου μαζί με φρουτώδη γεύση",
-        price: "1,80€"
-      },
-      {
-        name: "Νερό 500ml",
-        description: "Εμφιαλωμένο νερό",
-        price: "0,50€"
-      },
-      {
-        name: "Νερό 1.5lt",
-        description: "Το νερό είναι ιδανικό για να σας ξεδιψάσει και να σας αναζωογονήσει κάθε στιγμή της ημέρας",
-        price: "1,00€"
-      }
-    ]
-  }
-];
-
-const Menu = () => {
-  const isMobile = useIsMobile();
-  
-  const handleOrderClick = () => {
-    window.open('https://www.e-food.gr/delivery/thessaloniki/pumba-7484246', '_blank');
-  };
-
-  // Split categories for mobile view
-  const getMenuLayout = () => {
-    if (!isMobile) {
-      // Desktop: 3 columns with grid layout for better space usage
-      const columnCount = 3; // Increase columns from 2 to 3
-      const columnsArray = Array.from({ length: columnCount }, () => []);
-      
-      // Distribute menu items evenly across columns based on total item count
-      menuItems.forEach((category, idx) => {
-        columnsArray[idx % columnCount].push(category);
-      });
-      
-      return (
-        <div className="grid grid-cols-3 gap-4">
-          {columnsArray.map((columnCategories, colIdx) => (
-            <div key={colIdx} className="space-y-4">
-              {columnCategories.map((category, catIdx) => (
-                <div key={catIdx} className="reveal">
-                  <div className="flex items-center gap-2 mb-3 bg-gray-900/30 p-2 rounded-lg">
-                    {category.icon}
-                    <h3 className="text-xl font-bold text-pumba-red">{category.category}</h3>
-                  </div>
-                  <div className="space-y-2">
-                    {category.items.map((item, itemIdx) => (
-                      <div 
-                        key={itemIdx} 
-                        className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border-l-4 border-pumba-red shadow-[0_0_10px_rgba(255,30,30,0.2)]' : 'border border-transparent'}`}
-                      >
-                        <div className="p-3">
-                          <div className="flex justify-between items-start mb-1">
-                            <h4 className="text-lg font-bold">{item.name}</h4>
-                            <span className="text-pumba-gold font-bold ml-2 whitespace-nowrap">{item.price}</span>
-                          </div>
-                          {item.description && (
-                            <p className="text-gray-300 text-sm">{item.description}</p>
-                          )}
-                          {item.featured && (
-                            <div className="mt-2">
-                              <span className="bg-pumba-red text-white px-2 py-1 rounded-full text-xs font-bold">
-                                ΠΡΟΤΕΙΝΟΜΕΝΟ
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      );
-    } else {
-      // Mobile: 2 columns layout
-      // Create left and right column arrays
-      const leftColumn = menuItems.filter((_, idx) => idx % 2 === 0);
-      const rightColumn = menuItems.filter((_, idx) => idx % 2 === 1);
-      
-      return (
-        <div className="grid grid-cols-2 gap-2">
-          <div className="space-y-8">
-            {leftColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-2 mb-2">
-                  {category.icon}
-                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
-                      <div className="p-2">
-                        <div className="flex flex-col mb-1">
-                          <h4 className="text-sm font-bold">{item.name}</h4>
-                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-1">
-                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-8">
-            {rightColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-2 mb-2">
-                  {category.icon}
-                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
-                      <div className="p-2">
-                        <div className="flex flex-col mb-1">
-                          <h4 className="text-sm font-bold">{item.name}</h4>
-                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-1">
-                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    }
-  };
-
-  return (
-    <section id="menu" className="py-16 bg-gray-950 relative">
-      <div className="container mx-auto px-2 max-w-7xl">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white mb-3">Μενού</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Απολαύστε την αυθεντική ελληνική γεύση με τα φρέσκα υλικά και τις παραδοσιακές συνταγές μας
-          </p>
-        </div>
-        
-        {getMenuLayout()}
-        
-        <div className="text-center mt-10">
-          <Button 
-            onClick={handleOrderClick}
-            className="bg-pumba-red hover:bg-red-700 text-white px-8 py-6 rounded-full text-xl transition-all duration-300 transform hover:scale-105"
-          >
-            <ShoppingBag className="mr-2" />
-            Παραγγείλετε Online
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Menu;
+        description: "Ψωμάκι brioche με mesclun, chutney ντομάτας, κεφαλοτύρι σαγανάκι, πίκ
