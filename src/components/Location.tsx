@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { MapPin, Clock, Phone, Mail, Instagram, Facebook } from 'lucide-react';
-
 const Location = () => {
   return <div id="location" className="section bg-black">
       <div className="container mx-auto">
@@ -113,7 +111,8 @@ const Location = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-xl mb-2">Διεύθυνση</h4>
-                      <p className="text-gray-300">Λητή, Θεσσαλονίκη</p>
+                      <p className="text-gray-300">Σχολείου 32, Λητή 572 00
+                    </p>
                     </div>
                   </div>
                   
@@ -176,5 +175,4 @@ const Location = () => {
       </div>
     </div>;
 };
-
 export default Location;
