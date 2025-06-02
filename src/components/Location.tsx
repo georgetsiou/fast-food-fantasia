@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MapPin, Clock, Phone, Mail, Instagram } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 const Location = () => {
   return <div id="location" className="section bg-black">
@@ -74,6 +74,20 @@ const Location = () => {
                       </p>
                     </div>
                   </div>
+
+                  <div className="flex items-start">
+                    <div className="text-pumba-red mr-4 mt-1">
+                      <Facebook size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl mb-2">Facebook</h4>
+                      <p className="text-gray-300">
+                        <a href="https://www.facebook.com/p/Pumba-%CE%A3%CE%AF%CE%BD%CE%B4%CE%BF%CF%82-The-art-of-Gyros-61556393728789/" target="_blank" rel="noopener noreferrer" className="hover:text-pumba-red transition-colors">
+                          Pumba Σίνδος
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -120,8 +134,22 @@ const Location = () => {
                     <div>
                       <h4 className="font-bold text-xl mb-2">Instagram</h4>
                       <p className="text-gray-300">
-                        <a href="https://www.instagram.com/pumba_lhth/" target="_blank" rel="noopener noreferrer" className="hover:text-pumba-red transition-colors">
-                          @pumba_lhth
+                        <a href="https://www.instagram.com/pumpa_lhth/?locale=bz-hans&hl=am-et" target="_blank" rel="noopener noreferrer" className="hover:text-pumba-red transition-colors">
+                          @pumpa_lhth
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="text-pumba-red mr-4 mt-1">
+                      <Facebook size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl mb-2">Facebook</h4>
+                      <p className="text-gray-300">
+                        <a href="https://www.facebook.com/p/Pumba-%CE%A3%CE%AF%CE%BD%CE%B4%CE%BF%CF%82-The-art-of-Gyros-61556393728789/" target="_blank" rel="noopener noreferrer" className="hover:text-pumba-red transition-colors">
+                          Pumba Λητή
                         </a>
                       </p>
                     </div>
