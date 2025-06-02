@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, ShoppingBag } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, ShoppingBag, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -25,8 +25,11 @@ const Footer = () => {
                 <a href="https://www.instagram.com/pumba_sindos/" target="_blank" rel="noopener noreferrer" className="hover-grow">
                   <Instagram className="text-pumba-red hover:text-white transition-colors" size={24} />
                 </a>
-                <a href="https://www.instagram.com/pumba_lhth/" target="_blank" rel="noopener noreferrer" className="hover-grow">
+                <a href="https://www.instagram.com/pumpa_lhth/?locale=bz-hans&hl=am-et" target="_blank" rel="noopener noreferrer" className="hover-grow">
                   <Instagram className="text-pumba-red hover:text-white transition-colors" size={24} />
+                </a>
+                <a href="https://www.facebook.com/p/Pumba-%CE%A3%CE%AF%CE%BD%CE%B4%CE%BF%CF%82-The-art-of-Gyros-61556393728789/" target="_blank" rel="noopener noreferrer" className="hover-grow">
+                  <Facebook className="text-pumba-red hover:text-white transition-colors" size={24} />
                 </a>
               </div>
             </div>
