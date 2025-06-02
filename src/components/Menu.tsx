@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer, Burger } from 'lucide-react';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -148,7 +149,7 @@ const menuItems = [
         price: "6,00€"
       },
       {
-        name: "Αγγουροτομάτα",
+        name: "Αγγουροντομάτα",
         description: "Σαλάτα με ντομάτα, αγγούρι, φρέσκο κρεμμύδι, ξηρό κρεμμύδι, πιπεριά πράσινη & πιπεριά κόκκινη",
         price: "5,00€"
       },
@@ -300,7 +301,7 @@ const menuItems = [
         price: "Από 3,90€"
       },
       {
-        name: "Σουτζουκάκι γεμιστό ��ε Philadelphia σε σάντουιτ��",
+        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτ��",
         description: "Σάντουιτς σουτζουκάκι γεμιστό με Philadelphia με τα υλικά της επιλογής σας",
         price: "Από 4,20€"
       },
@@ -445,7 +446,7 @@ const menuItems = [
         price: "7,70€"
       },
       {
-        name: "Λουκάνικο Βαυβαρίας μερίδα",
+        name: "Λουκάνικο Βαυαρίας μερίδα",
         description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
         price: "7,70€"
       },
@@ -602,7 +603,7 @@ const menuItems = [
   },
   {
     category: "Burgers",
-    icon: <Burger className="text-pumba-red" size={24} />,
+    icon: <Pizza className="text-pumba-red" size={24} />,
     items: [
       {
         name: "Pumba Double Burger",
