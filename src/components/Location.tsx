@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, Clock, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 const Location = () => {
@@ -54,6 +55,20 @@ const Location = () => {
                       <p className="text-gray-300">
                         <a href="tel:2310799500" className="hover:text-pumba-red transition-colors">
                           231 079 9500
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-pumba-red mr-4 mt-1">
+                      <Mail size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl mb-2">Email</h4>
+                      <p className="text-gray-300">
+                        <a href="mailto:pumbaike@gmail.com" className="hover:text-pumba-red transition-colors">
+                          pumbaike@gmail.com
                         </a>
                       </p>
                     </div>
@@ -123,6 +138,20 @@ const Location = () => {
                     <div>
                       <h4 className="font-bold text-xl mb-2">Ώρες Λειτουργίας</h4>
                       <p className="text-gray-300">Δευτέρα-Κυριακή: 12:00 - 00:00</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-pumba-red mr-4 mt-1">
+                      <Phone size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xl mb-2">Τηλέφωνο</h4>
+                      <p className="text-gray-300">
+                        <a href="tel:2394071900" className="hover:text-pumba-red transition-colors">
+                          2394 071900
+                        </a>
+                      </p>
                     </div>
                   </div>
                   
