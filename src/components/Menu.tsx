@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { ExternalLink, ShoppingBag, Utensils, Coffee, Pizza, Salad, Beef, Sandwich, Beer, ChevronDown } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // New menu items with Greek food
@@ -18,7 +18,7 @@ const menuItems = [
       },
       {
         name: "Τζατζίκι",
-        description: "Εδώ δεν χωράνε συστάσεις. Τζατζίκι, το κλασικό, το αληθινό, το αγαπημένο. Ζήτα άδεια από το��ς παρευρισκόμενους και κατανάλωσε εντελώς ανεύθυνα!",
+        description: "Εδώ δεν χωράνε συστάσεις. Τζατζίκι, το κλασικό, το αληθινό, το αγαπημένο. Ζήτα άδεια από τους παρευρισκόμενους και κατανάλωσε εντελώς ανεύθυνα!",
         price: "Από 0,50€"
       },
       {
@@ -94,7 +94,7 @@ const menuItems = [
       },
       {
         name: "Πατάτες τηγανητές",
-        description: "Φρεσκ���κομμένες πατάτες τηγανητές",
+        description: "Φρεσκοκομμένες πατάτες τηγανητές",
         price: "3,50€"
       },
       {
@@ -140,12 +140,12 @@ const menuItems = [
       },
       {
         name: "Χωριάτικη",
-        description: "Ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, ελιές & φέτα ΠΟП",
+        description: "Ντομάτα, αγγούρι, κρεμμύδι, πιπεριά, ελιές & φέτα ΠΟΠ",
         price: "7,40€"
       },
       {
         name: "Ντάκος",
-        description: "Καρέ ντομάτας, κρεμμύδι, ελιές, κάππαρη, φέτα ΠΟП & κρητικό ντάκο",
+        description: "Καρέ ντομάτας, κρεμμύδι, ελιές, κάππαρη, φέτα ΠΟΠ & κρητικό ντάκο",
         price: "6,00€"
       },
       {
@@ -205,7 +205,7 @@ const menuItems = [
         price: "Από 2,00€"
       },
       {
-        name: "Λουκάνικο ��αυαρίας",
+        name: "Λουκάνικο Βαυαρίας",
         description: "",
         price: "Από 1,90€"
       },
@@ -272,7 +272,7 @@ const menuItems = [
       },
       {
         name: "Φιλέτο κοτόπουλο μπούτι σε σάντουιτς",
-        description: "Σάντουιτς φιλέτο κο��όπουλ�� μπούτ�� με τα υλικά της επιλογής σας",
+        description: "Σάντουιτς φιλέτο κοτόπουλο μπούτι με τα υλικά της επιλογής σας",
         price: "Από 4,00€"
       },
       {
@@ -301,7 +301,7 @@ const menuItems = [
         price: "Από 3,90€"
       },
       {
-        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτ��",
+        name: "Σουτζουκάκι γεμιστό με Philadelphia σε σάντουιτς",
         description: "Σάντουιτς σουτζουκάκι γεμιστό με Philadelphia με τα υλικά της επιλογής σας",
         price: "Από 4,20€"
       },
@@ -352,7 +352,7 @@ const menuItems = [
         price: "Από 2,50€"
       },
       {
-        name: "Παν��έτα χοιρινή σε Αθηναϊκή πίτα",
+        name: "Πανσέτα χοιρινή σε Αθηναϊκή πίτα",
         description: "Αθηναϊκή πίτα 16cm πανσέτα χοιρινή με τα υλικά της επιλογής σας",
         price: "Από 2,50€"
       },
@@ -385,7 +385,7 @@ const menuItems = [
       },
       {
         name: "Καλαμάκι Κοτόπουλο",
-        description: "Πίτα, ��αλαμάκι κοτόπουλ��, ντομάτα, κρεμμύδι, πατάτες, σως",
+        description: "Πίτα, καλαμάκι κοτόπουλο, ντομάτα, κρεμμύδι, πατάτες, σως",
         price: "3,80€"
       }
     ]
@@ -461,7 +461,7 @@ const menuItems = [
         price: "8,10€"
       },
       {
-        name: "Μπιφ��έκι Μοσχαρίσιο",
+        name: "Μπιφτέκι Μοσχαρίσιο",
         description: "3 Τεμάχια. Συνοδεύεται από πίτα, ανάμεικτη σαλάτα, πατάτες τηγανητές & τζατζίκι",
         price: "8,10€"
       },
@@ -789,7 +789,7 @@ const menuItems = [
       },
       {
         name: "Fanta Λεμόνι 330ml",
-        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρ��ματα λεμονιού και αμέτρητες φυσαλίδες",
+        description: "Η Fanta Λεμονάδα περιέχει 7% χυμό λεμονιού, φυσικά αρώματα λεμονιού και αμέτρητες φυσαλίδες",
         price: "1,80€"
       },
       {
@@ -839,7 +839,7 @@ const menuItems = [
       },
       {
         name: "Lipton Ice Tea Ροδάκινο 330ml",
-        description: "Πιές μια γουλιά για να νιώσεις μια έκρηξ�� γεύσης ροδάκινου μαζί με φρουτώδη γεύση",
+        description: "Πιές μια γουλιά για να νιώσεις μια έκρηξη γεύσης ροδάκινου μαζί με φρουτώδη γεύση",
         price: "1,80€"
       },
       {
@@ -917,69 +917,49 @@ const Menu = () => {
         </div>
       );
     } else {
-      // Mobile: 2 columns layout
-      // Create left and right column arrays
-      const leftColumn = menuItems.filter((_, idx) => idx % 2 === 0);
-      const rightColumn = menuItems.filter((_, idx) => idx % 2 === 1);
-      
+      // Mobile: Collapsible categories
       return (
-        <div className="grid grid-cols-2 gap-2">
-          <div className="space-y-8">
-            {leftColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-2 mb-2">
-                  {category.icon}
-                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
+        <div className="space-y-2">
+          {menuItems.map((category, idx) => (
+            <Collapsible key={idx} className="reveal">
+              <CollapsibleTrigger className="w-full">
+                <div className="flex items-center justify-between w-full p-3 bg-gray-900/50 hover:bg-gray-800/50 rounded-lg transition-colors">
+                  <div className="flex items-center gap-2">
+                    {category.icon}
+                    <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
+                  </div>
+                  <ChevronDown className="h-4 w-4 text-pumba-red transition-transform duration-200" />
                 </div>
-                <div className="space-y-4">
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-1 pb-2">
+                <div className="space-y-2 mt-2">
                   {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
+                    <div 
+                      key={itemIdx} 
+                      className={`menu-item rounded-lg overflow-hidden bg-gray-900/30 hover:bg-gray-800/30 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}
+                    >
                       <div className="p-2">
                         <div className="flex flex-col mb-1">
                           <h4 className="text-sm font-bold">{item.name}</h4>
                           <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
                         </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-1">
-                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
+                        {item.description && (
+                          <p className="text-gray-300 text-xs">{item.description}</p>
+                        )}
+                        {item.featured && (
+                          <div className="mt-1">
+                            <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
+                              ΠΡΟΤΕΙΝΟΜΕΝΟ
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-8">
-            {rightColumn.map((category, idx) => (
-              <div key={idx} className="reveal">
-                <div className="flex items-center gap-2 mb-2">
-                  {category.icon}
-                  <h3 className="text-base font-bold text-pumba-red">{category.category}</h3>
-                </div>
-                <div className="space-y-4">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className={`menu-item rounded-lg overflow-hidden bg-gray-900/50 hover:bg-gray-800/50 transition-all duration-300 ${item.featured ? 'border border-pumba-red' : 'border border-transparent'}`}>
-                      <div className="p-2">
-                        <div className="flex flex-col mb-1">
-                          <h4 className="text-sm font-bold">{item.name}</h4>
-                          <span className="text-pumba-gold font-bold text-sm">{item.price}</span>
-                        </div>
-                        <p className="text-gray-300 text-xs">{item.description}</p>
-                        {item.featured && <div className="mt-1">
-                          <span className="bg-pumba-red text-white px-1 py-0.5 rounded-full text-[10px] font-bold">
-                            ΠΡΟΤΕΙΝΟΜΕΝΟ
-                          </span>
-                        </div>}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+              </CollapsibleContent>
+            </Collapsible>
+          ))}
         </div>
       );
     }
